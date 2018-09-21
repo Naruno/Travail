@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 int longueurChaine(char *p_chaine) {
-
+	
 	if (!p_chaine) {
 		printf("La chaine n'est pas valide\n");
 		return 0;
@@ -13,7 +13,7 @@ int longueurChaine(char *p_chaine) {
 	while (p_chaine[i] != NULL) {
 		i++;
 	}
-	//printf("%s fait %d characteres\n", chaine, i);
+	//printf("%s fait %d characteres\n", p_chaine, i);
 	return i;
 }
 
@@ -202,20 +202,168 @@ int palindrome(char* p_chaine) {
 
 int findFirstOf(char* p_chaine, char* p_chaine2) {
 
-	int t_p_chaine = longueurChaine(p_chaine), t_p_chaine2 = longueurChaine(p_chaine2), i = 0, j = 0;
-	printf("t_pchaine = %d\n", t_p_chaine);
-	for (i = 0; i < t_p_chaine; i++) {
-		printf("i = %d\n", i);
-		for (j = 0; j < t_p_chaine2; j++) {
-			printf("j = %d\n", j);
+	int t_chaine = longueurChaine(p_chaine), t_chaine2 = longueurChaine(p_chaine2), i = 0, j = 0;
+
+	for (i = 0; i < t_chaine; i++) {
+
+		for (j = 0; j < t_chaine2; j++) {
+
 			if (p_chaine[i] == p_chaine2[j]) {
 				return i;
 			}
 		}
-
 	}
-	printf("Aucune occurence trouvee\n");
 	return -1;
 }
 
+int findLastOf(char* p_chaine, char* p_chaine2) {
+
+	int t_chaine = longueurChaine(p_chaine) - 1, t_chaine2 = longueurChaine(p_chaine2) - 1 , i = 0, j = 0;
+
+	for (i = t_chaine; i > -1 ; i--) {
+
+		for (j = t_chaine2; j > -1 ; j--) {
+
+			if (p_chaine[i] == p_chaine2[j]) {
+				return i;
+			}
+		}
+	}
+	return -1;
+}
+
+int findFirstNotOf(char* p_chaine, char* p_chaine2) {
+
+	int t_chaine = longueurChaine(p_chaine), t_chaine2 = longueurChaine(p_chaine2), i = 0, j = 0, egal = 0;
+
+	for (i = 0; i < t_chaine; i++) {
+		egal = 0;
+		for (j = 0; j < t_chaine2; j++) {
+
+			if (p_chaine[i] == p_chaine2[j]) {
+				egal++;
+			}
+		}
+		if (!egal) {
+			return i;
+		}
+	}
+	return -1;
+}
+int findLastNotOf(char* p_chaine, char* p_chaine2) {
+
+	int t_chaine = longueurChaine(p_chaine) - 1, t_chaine2 = longueurChaine(p_chaine2) - 1, i = 0, j = 0, egal = 0;
+
+	for (i = t_chaine; i > -1; i--) {
+		egal = 0;
+		for (j = t_chaine2; j > -1; j--) {
+
+			if (p_chaine[i] == p_chaine2[j]) {
+				egal++;
+			}
+		}
+		if (!egal) {
+			return i;
+		}
+	}
+	return -1;
+
+}
+
+int estDans(char p_char, char* p_souschaine) {
+
+	int t_souschaine = longueurChaine(p_souschaine), i = 0;
+	for (i = 0; i < t_souschaine; i++) {
+		if (p_char == p_souschaine[i]) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
+char** split(char* p_chaine, char* p_souschaine, int* taille) {
+	
+	int t_chaine = longueurChaine(p_chaine), t_chaine2 = longueurChaine(p_souschaine), i = 0, j = 0, ligne = 0, colonne = 0, occurences = 0;
+
+	for (i = 0; i < t_chaine; i++) {
+		for (j = 0; j < t_chaine2; j++) {
+			if (p_chaine[i] == p_souschaine[j]) {
+				occurences++;
+				break;
+			}
+		}
+	}	
+	*taille = occurences;
+	char** res = (char**)calloc(occurences, sizeof(char*));
+	for (i = 0; i < occurences; i++) {
+		res[i] = (char*)calloc(t_chaine + 1, sizeof(char));
+	}	
+
+	for (i = 0; i < t_chaine; i++) {
+		
+		if (estDans(p_chaine[i], p_souschaine)) {
+			res[ligne][colonne] = '\0';
+			colonne = 0;
+			ligne++;
+		}
+		else {
+			res[ligne][colonne] = p_chaine[i];
+			colonne++;
+		}		
+	}
+	return res;
+}
+
+char* toUpper(char* p_chaine) {
+
+	int taille = longueurChaine(p_chaine), i = 0;
+	char* min = (char*)calloc(taille + 1, sizeof(char));
+	
+	for (i = 0; i < taille; i++) {		
+		if (p_chaine[i] > 96 && p_chaine[i] < 123) {
+			min[i] = p_chaine[i] - 32;
+		}
+		else {
+			min[i] = p_chaine[i];
+		}		
+	}
+	min[taille] = '\0';
+	return min;
+}
+
+char* toLower(char* p_chaine) {
+	int taille = longueurChaine(p_chaine), i = 0;
+	char* min = (char*)calloc(taille + 1, sizeof(char));
+
+	for (i = 0; i < taille; i++) {
+		if (p_chaine[i] > 64 && p_chaine[i] < 91) {
+			min[i] = p_chaine[i] + 32;
+		}
+		else {
+			min[i] = p_chaine[i];
+		}
+	}
+	min[taille] = '\0';
+	return min;
+}
+
+char* inverseCase(char* p_chaine) {
+
+	int taille = longueurChaine(p_chaine), i = 0;
+	char* inverse = (char*)calloc(taille + 1, sizeof(char));
+
+	for (i = 0; i < taille; i++) {
+		if (p_chaine[i] > 64 && p_chaine[i] < 91) {
+			inverse[i] = p_chaine[i] + 32;
+			continue;
+		}
+		if (p_chaine[i] > 96 && p_chaine[i] < 123) {
+			inverse[i] = p_chaine[i] - 32;
+			continue;
+		}		
+		inverse[i] = p_chaine[i];		
+	}
+	inverse[taille] = '\0';
+	return inverse;
+}
 #endif 

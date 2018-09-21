@@ -4,9 +4,11 @@
 #include <Windows.h>
 
 int main() {
-	char* chaine = "laval", chaine2 = "aeiouy";
-	
-	printf("%d\n", findFirstOf(chaine, chaine2));
+	char *chaine = "C'etait bien_le WEI !?! ", *min = NULL;
+	printf("%s\n", chaine);
+	min = inverseCase(chaine);
+	printf("%s\n", min);
+
 	system("pause");	
 	
 	return 0;

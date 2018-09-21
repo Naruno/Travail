@@ -12,3 +12,8 @@ Node * ajoutTri(Node * p_head, Node * p_node) {
 	}
 	p_head->m_next = ajoutTri(p_head->m_next, p_node);
 }
+
+Element initialisation(int nombre) {
+
+	Element 
+}
