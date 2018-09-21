@@ -1,0 +1,4 @@
+masse 0.2
+fCoef 0.9
+position 0 1
+vitesse 35.0 35.0

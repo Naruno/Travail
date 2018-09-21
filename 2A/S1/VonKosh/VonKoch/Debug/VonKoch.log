@@ -1,0 +1,5 @@
+﻿  main.c
+c:\users\nicol\source\programmation\c\2a\s1\vonkosh\vonkoch\main.c(17): warning C4101: 'p3': unreferenced local variable
+c:\users\nicol\source\programmation\c\2a\s1\vonkosh\vonkoch\main.c(17): warning C4101: 'p1': unreferenced local variable
+  VonKoch.vcxproj -> C:\Users\nicol\source\Programmation\C\2A\S1\VonKosh\\bin\VonKoch_d.exe
+          1 fichier(s) copié(s).

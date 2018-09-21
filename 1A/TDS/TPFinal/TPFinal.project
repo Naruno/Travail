@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="TPFinal" Version="10.0.0" InternalType="Console">
+  <VirtualDirectory Name="CISTERNAS_VASSEUR">
+    <VirtualDirectory Name="3_Gravitation">
+      <File Name="CISTERNAS_VASSEUR/3_Gravitation/decl.h"/>
+      <File Name="CISTERNAS_VASSEUR/3_Gravitation/vecteur.c"/>
+      <File Name="CISTERNAS_VASSEUR/3_Gravitation/balle.c"/>
+      <File Name="CISTERNAS_VASSEUR/3_Gravitation/vecteur.h"/>
+      <File Name="CISTERNAS_VASSEUR/3_Gravitation/fpstimer.c"/>
+      <File Name="CISTERNAS_VASSEUR/3_Gravitation/balle.h"/>
+      <File Name="CISTERNAS_VASSEUR/3_Gravitation/main.c"/>
+      <File Name="CISTERNAS_VASSEUR/3_Gravitation/sdl_stuff.c"/>
+      <File Name="CISTERNAS_VASSEUR/3_Gravitation/fpstimer.h"/>
+      <File Name="CISTERNAS_VASSEUR/3_Gravitation/sdl_stuff.h"/>
+      <File Name="CISTERNAS_VASSEUR/3_Gravitation/balle.txt"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="2_Rebonds">
+      <File Name="CISTERNAS_VASSEUR/2_Rebonds/vecteur.c"/>
+      <File Name="CISTERNAS_VASSEUR/2_Rebonds/balle.c"/>
+      <File Name="CISTERNAS_VASSEUR/2_Rebonds/vecteur.h"/>
+      <File Name="CISTERNAS_VASSEUR/2_Rebonds/fpstimer.c"/>
+      <File Name="CISTERNAS_VASSEUR/2_Rebonds/balle.h"/>
+      <File Name="CISTERNAS_VASSEUR/2_Rebonds/main.c"/>
+      <File Name="CISTERNAS_VASSEUR/2_Rebonds/sdl_stuff.c"/>
+      <File Name="CISTERNAS_VASSEUR/2_Rebonds/fpstimer.h"/>
+      <File Name="CISTERNAS_VASSEUR/2_Rebonds/sdl_stuff.h"/>
+      <File Name="CISTERNAS_VASSEUR/2_Rebonds/balle.txt"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="4_Ressorts">
+      <File Name="CISTERNAS_VASSEUR/4_Ressorts/decl.h"/>
+      <File Name="CISTERNAS_VASSEUR/4_Ressorts/fpstimer.c"/>
+      <File Name="CISTERNAS_VASSEUR/4_Ressorts/main.c"/>
+      <File Name="CISTERNAS_VASSEUR/4_Ressorts/sdl_stuff.c"/>
+      <File Name="CISTERNAS_VASSEUR/4_Ressorts/fpstimer.h"/>
+      <File Name="CISTERNAS_VASSEUR/4_Ressorts/sdl_stuff.h"/>
+      <File Name="CISTERNAS_VASSEUR/4_Ressorts/vecteur.c"/>
+      <File Name="CISTERNAS_VASSEUR/4_Ressorts/balle.c"/>
+      <File Name="CISTERNAS_VASSEUR/4_Ressorts/vecteur.h"/>
+      <File Name="CISTERNAS_VASSEUR/4_Ressorts/balle.h"/>
+      <File Name="CISTERNAS_VASSEUR/4_Ressorts/balle.txt"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="1_CSV">
+      <File Name="CISTERNAS_VASSEUR/1_CSV/vecteur.c"/>
+      <File Name="CISTERNAS_VASSEUR/1_CSV/balle.c"/>
+      <File Name="CISTERNAS_VASSEUR/1_CSV/vecteur.h"/>
+      <File Name="CISTERNAS_VASSEUR/1_CSV/newton.c"/>
+      <File Name="CISTERNAS_VASSEUR/1_CSV/balle.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Bonus_1">
+      <File Name="CISTERNAS_VASSEUR/Bonus_1/vecteur.c"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_1/balle.c"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_1/vecteur.h"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_1/fpstimer.c"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_1/balle.h"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_1/main.c"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_1/sdl_stuff.c"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_1/fpstimer.h"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_1/sdl_stuff.h"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_1/balle.txt"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_1/Readme.txt"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Bonus_2">
+      <File Name="CISTERNAS_VASSEUR/Bonus_2/decl.h"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_2/vecteur.c"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_2/balle.c"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_2/vecteur.h"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_2/fpstimer.c"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_2/balle.h"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_2/main.c"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_2/sdl_stuff.c"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_2/fpstimer.h"/>
+      <File Name="CISTERNAS_VASSEUR/Bonus_2/sdl_stuff.h"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Description/>
+  <Dependencies/>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="" Assembler="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu gcc" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="Default"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu gcc" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-O2;-Wall" C_Options="-O2;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+        <Preprocessor Value="NDEBUG"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="Default"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+  <VirtualDirectory Name="src">
+    <File Name="newton.c"/>
+    <File Name="balle.h"/>
+    <File Name="vecteur.h"/>
+    <File Name="vecteur.c"/>
+  </VirtualDirectory>
+</CodeLite_Project>

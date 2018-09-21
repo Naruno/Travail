@@ -1,0 +1,10 @@
+Pensez à passer le fichier balle.txt en parametre de la ligne de commande
+
+Le but du jeu est de contenir la balle dans la cible
+Pour ce faire vous devrez utiliser la gravitation dû aux flechettes plaçables grâce au clic de la souris
+5 flechettes sont disponibles
+Le jeu dure 15 secondes au bout desquelles le jeu s'arrête et affiche votre taux de présence sur la cible
+
+Nous avons modifié le fichier sdl_stuff.c afin d'ajouter un background et de modifier "jupiter.bmp" en "flechette.bmp"
+
+De plus nous avons ajouté un timer dans le main et simulé un carré pour prendre en compte le taux de présence

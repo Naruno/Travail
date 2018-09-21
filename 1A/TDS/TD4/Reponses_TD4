@@ -1,0 +1,14 @@
+1.
+    int func (int z); //Correctement ecrit
+    float a (float a); //Correct
+    double f (float a, int b); //Correct
+    func (); // int func();
+    void toto (void var);  //Correct
+    var func (char); //int func(int char);
+    short a (int func); //Correct
+
+2.
+    Adresses |Nom de variable|Valeur de variable
+    1        |a              |2
+    2        |b              |3
+    3        |res            |8

@@ -1,0 +1,8 @@
+largeur 60  
+hauteur 30         
+motif 4
+naissance 0 0 0 0 0 0 0 0
+survie 2 3 3 3 3 3 3 3
+image o
+vitesse 0.35
+continue 1

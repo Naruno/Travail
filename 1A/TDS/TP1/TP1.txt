@@ -1,0 +1,1 @@
+./Debug/rendu_monnaie.c.o ./Debug/harmonique.c.o ./Debug/tris_entier.c.o ./Debug/Je_pense.c.o ./Debug/syracuse.c.o ./Debug/stars_matrix_like.c.o ./Debug/juste_prix.c.o ./Debug/rendu_monnaie2.c.o

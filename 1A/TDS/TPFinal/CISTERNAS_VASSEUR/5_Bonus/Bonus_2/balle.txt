@@ -1,0 +1,5 @@
+masse 0.5
+fCoef 0.9
+position 0 0
+vitesse 2.0 2.0
+attenuation -0.6

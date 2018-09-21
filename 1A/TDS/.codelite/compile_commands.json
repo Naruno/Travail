@@ -1,0 +1,241 @@
+[{
+  "file": "/home/nicolas/TDS/Polynomes/polynome.c",
+  "directory": "/home/nicolas/TDS/Polynomes",
+  "command": "gcc -c /home/nicolas/TDS/Polynomes/polynome.c -o /home/nicolas/TDS/Polynomes/polynome.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/Polynomes/main.c",
+  "directory": "/home/nicolas/TDS/Polynomes",
+  "command": "gcc -c /home/nicolas/TDS/Polynomes/main.c -o /home/nicolas/TDS/Polynomes/main.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD1/main.c",
+  "directory": "/home/nicolas/TDS/TD1",
+  "command": "gcc -c /home/nicolas/TDS/TD1/main.c -o /home/nicolas/TDS/TD1/main.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD10/representation.c",
+  "directory": "/home/nicolas/TDS/TD10",
+  "command": "gcc -c /home/nicolas/TDS/TD10/representation.c -o /home/nicolas/TDS/TD10/representation.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD10/parite.c",
+  "directory": "/home/nicolas/TDS/TD10",
+  "command": "gcc -c /home/nicolas/TDS/TD10/parite.c -o /home/nicolas/TDS/TD10/parite.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD10/oppose.c",
+  "directory": "/home/nicolas/TDS/TD10",
+  "command": "gcc -c /home/nicolas/TDS/TD10/oppose.c -o /home/nicolas/TDS/TD10/oppose.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD10/float.c",
+  "directory": "/home/nicolas/TDS/TD10",
+  "command": "gcc -c /home/nicolas/TDS/TD10/float.c -o /home/nicolas/TDS/TD10/float.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD2/exponentielle.c",
+  "directory": "/home/nicolas/TDS/TD2",
+  "command": "gcc -c /home/nicolas/TDS/TD2/exponentielle.c -o /home/nicolas/TDS/TD2/exponentielle.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD2/permute1.c",
+  "directory": "/home/nicolas/TDS/TD2",
+  "command": "gcc -c /home/nicolas/TDS/TD2/permute1.c -o /home/nicolas/TDS/TD2/permute1.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD2/permute2.c",
+  "directory": "/home/nicolas/TDS/TD2",
+  "command": "gcc -c /home/nicolas/TDS/TD2/permute2.c -o /home/nicolas/TDS/TD2/permute2.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD2/permute3.c",
+  "directory": "/home/nicolas/TDS/TD2",
+  "command": "gcc -c /home/nicolas/TDS/TD2/permute3.c -o /home/nicolas/TDS/TD2/permute3.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD3/conditionnelle_if.c",
+  "directory": "/home/nicolas/TDS/TD3",
+  "command": "gcc -c /home/nicolas/TDS/TD3/conditionnelle_if.c -o /home/nicolas/TDS/TD3/conditionnelle_if.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD3/conditionnelle_switch.c",
+  "directory": "/home/nicolas/TDS/TD3",
+  "command": "gcc -c /home/nicolas/TDS/TD3/conditionnelle_switch.c -o /home/nicolas/TDS/TD3/conditionnelle_switch.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD3/un_peu_de_code_cercle.c",
+  "directory": "/home/nicolas/TDS/TD3",
+  "command": "gcc -c /home/nicolas/TDS/TD3/un_peu_de_code_cercle.c -o /home/nicolas/TDS/TD3/un_peu_de_code_cercle.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD3/compregension.c",
+  "directory": "/home/nicolas/TDS/TD3",
+  "command": "gcc -c /home/nicolas/TDS/TD3/compregension.c -o /home/nicolas/TDS/TD3/compregension.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD3/erreur_de_code.c",
+  "directory": "/home/nicolas/TDS/TD3",
+  "command": "gcc -c /home/nicolas/TDS/TD3/erreur_de_code.c -o /home/nicolas/TDS/TD3/erreur_de_code.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD3/Du_code_du_code.c",
+  "directory": "/home/nicolas/TDS/TD3",
+  "command": "gcc -c /home/nicolas/TDS/TD3/Du_code_du_code.c -o /home/nicolas/TDS/TD3/Du_code_du_code.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD3/Du_code_du_code2.c",
+  "directory": "/home/nicolas/TDS/TD3",
+  "command": "gcc -c /home/nicolas/TDS/TD3/Du_code_du_code2.c -o /home/nicolas/TDS/TD3/Du_code_du_code2.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD3/scanf_charriot.c",
+  "directory": "/home/nicolas/TDS/TD3",
+  "command": "gcc -c /home/nicolas/TDS/TD3/scanf_charriot.c -o /home/nicolas/TDS/TD3/scanf_charriot.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD4/myRand.c",
+  "directory": "/home/nicolas/TDS/TD4",
+  "command": "gcc -c /home/nicolas/TDS/TD4/myRand.c -o /home/nicolas/TDS/TD4/myRand.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD4/addition.c",
+  "directory": "/home/nicolas/TDS/TD4",
+  "command": "gcc -c /home/nicolas/TDS/TD4/addition.c -o /home/nicolas/TDS/TD4/addition.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD4/multiplication.c",
+  "directory": "/home/nicolas/TDS/TD4",
+  "command": "gcc -c /home/nicolas/TDS/TD4/multiplication.c -o /home/nicolas/TDS/TD4/multiplication.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD4/minietmaxi.c",
+  "directory": "/home/nicolas/TDS/TD4",
+  "command": "gcc -c /home/nicolas/TDS/TD4/minietmaxi.c -o /home/nicolas/TDS/TD4/minietmaxi.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD5/pointeur.c",
+  "directory": "/home/nicolas/TDS/TD5",
+  "command": "gcc -c /home/nicolas/TDS/TD5/pointeur.c -o /home/nicolas/TDS/TD5/pointeur.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD5/pointeur2.c",
+  "directory": "/home/nicolas/TDS/TD5",
+  "command": "gcc -c /home/nicolas/TDS/TD5/pointeur2.c -o /home/nicolas/TDS/TD5/pointeur2.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD5/toujours_plus_loin.c",
+  "directory": "/home/nicolas/TDS/TD5",
+  "command": "gcc -c /home/nicolas/TDS/TD5/toujours_plus_loin.c -o /home/nicolas/TDS/TD5/toujours_plus_loin.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD5/palindrome_iteratif.c",
+  "directory": "/home/nicolas/TDS/TD5",
+  "command": "gcc -c /home/nicolas/TDS/TD5/palindrome_iteratif.c -o /home/nicolas/TDS/TD5/palindrome_iteratif.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD5/arithmetique_pointeur.c",
+  "directory": "/home/nicolas/TDS/TD5",
+  "command": "gcc -c /home/nicolas/TDS/TD5/arithmetique_pointeur.c -o /home/nicolas/TDS/TD5/arithmetique_pointeur.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD6/creationtableau.c",
+  "directory": "/home/nicolas/TDS/TD6",
+  "command": "gcc -c /home/nicolas/TDS/TD6/creationtableau.c -o /home/nicolas/TDS/TD6/creationtableau.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD6/modificationtableau.c",
+  "directory": "/home/nicolas/TDS/TD6",
+  "command": "gcc -c /home/nicolas/TDS/TD6/modificationtableau.c -o /home/nicolas/TDS/TD6/modificationtableau.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD6/tableau2D.c",
+  "directory": "/home/nicolas/TDS/TD6",
+  "command": "gcc -c /home/nicolas/TDS/TD6/tableau2D.c -o /home/nicolas/TDS/TD6/tableau2D.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD6/saisircrottes.c",
+  "directory": "/home/nicolas/TDS/TD6",
+  "command": "gcc -c /home/nicolas/TDS/TD6/saisircrottes.c -o /home/nicolas/TDS/TD6/saisircrottes.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD6/sorcellerie.c",
+  "directory": "/home/nicolas/TDS/TD6",
+  "command": "gcc -c /home/nicolas/TDS/TD6/sorcellerie.c -o /home/nicolas/TDS/TD6/sorcellerie.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD6/time.c",
+  "directory": "/home/nicolas/TDS/TD6",
+  "command": "gcc -c /home/nicolas/TDS/TD6/time.c -o /home/nicolas/TDS/TD6/time.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD7/pratique.c",
+  "directory": "/home/nicolas/TDS/TD7",
+  "command": "gcc -c /home/nicolas/TDS/TD7/pratique.c -o /home/nicolas/TDS/TD7/pratique.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD8/structure.c",
+  "directory": "/home/nicolas/TDS/TD8",
+  "command": "gcc -c /home/nicolas/TDS/TD8/structure.c -o /home/nicolas/TDS/TD8/structure.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD8/etudiant.c",
+  "directory": "/home/nicolas/TDS/TD8",
+  "command": "gcc -c /home/nicolas/TDS/TD8/etudiant.c -o /home/nicolas/TDS/TD8/etudiant.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD8/enumeration.c",
+  "directory": "/home/nicolas/TDS/TD8",
+  "command": "gcc -c /home/nicolas/TDS/TD8/enumeration.c -o /home/nicolas/TDS/TD8/enumeration.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD8/noel.c",
+  "directory": "/home/nicolas/TDS/TD8",
+  "command": "gcc -c /home/nicolas/TDS/TD8/noel.c -o /home/nicolas/TDS/TD8/noel.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD8/Date.c",
+  "directory": "/home/nicolas/TDS/TD8",
+  "command": "gcc -c /home/nicolas/TDS/TD8/Date.c -o /home/nicolas/TDS/TD8/Date.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD9/fichier.c",
+  "directory": "/home/nicolas/TDS/TD9",
+  "command": "gcc -c /home/nicolas/TDS/TD9/fichier.c -o /home/nicolas/TDS/TD9/fichier.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TD9/sapin.c",
+  "directory": "/home/nicolas/TDS/TD9",
+  "command": "gcc -c /home/nicolas/TDS/TD9/sapin.c -o /home/nicolas/TDS/TD9/sapin.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP1/rendu_monnaie.c",
+  "directory": "/home/nicolas/TDS/TP1",
+  "command": "gcc -c /home/nicolas/TDS/TP1/rendu_monnaie.c -o /home/nicolas/TDS/TP1/rendu_monnaie.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP1/harmonique.c",
+  "directory": "/home/nicolas/TDS/TP1",
+  "command": "gcc -c /home/nicolas/TDS/TP1/harmonique.c -o /home/nicolas/TDS/TP1/harmonique.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP1/tris_entier.c",
+  "directory": "/home/nicolas/TDS/TP1",
+  "command": "gcc -c /home/nicolas/TDS/TP1/tris_entier.c -o /home/nicolas/TDS/TP1/tris_entier.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP1/Je_pense.c",
+  "directory": "/home/nicolas/TDS/TP1",
+  "command": "gcc -c /home/nicolas/TDS/TP1/Je_pense.c -o /home/nicolas/TDS/TP1/Je_pense.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP1/syracuse.c",
+  "directory": "/home/nicolas/TDS/TP1",
+  "command": "gcc -c /home/nicolas/TDS/TP1/syracuse.c -o /home/nicolas/TDS/TP1/syracuse.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP1/stars_matrix_like.c",
+  "directory": "/home/nicolas/TDS/TP1",
+  "command": "gcc -c /home/nicolas/TDS/TP1/stars_matrix_like.c -o /home/nicolas/TDS/TP1/stars_matrix_like.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP1/juste_prix.c",
+  "directory": "/home/nicolas/TDS/TP1",
+  "command": "gcc -c /home/nicolas/TDS/TP1/juste_prix.c -o /home/nicolas/TDS/TP1/juste_prix.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP1/rendu_monnaie2.c",
+  "directory": "/home/nicolas/TDS/TP1",
+  "command": "gcc -c /home/nicolas/TDS/TP1/rendu_monnaie2.c -o /home/nicolas/TDS/TP1/rendu_monnaie2.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP2/swap.c",
+  "directory": "/home/nicolas/TDS/TP2",
+  "command": "gcc -c /home/nicolas/TDS/TP2/swap.c -o /home/nicolas/TDS/TP2/swap.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP2/miroir.c",
+  "directory": "/home/nicolas/TDS/TP2",
+  "command": "gcc -c /home/nicolas/TDS/TP2/miroir.c -o /home/nicolas/TDS/TP2/miroir.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP2/secondedregres.c",
+  "directory": "/home/nicolas/TDS/TP2",
+  "command": "gcc -c /home/nicolas/TDS/TP2/secondedregres.c -o /home/nicolas/TDS/TP2/secondedregres.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP2/racine.c",
+  "directory": "/home/nicolas/TDS/TP2",
+  "command": "gcc -c /home/nicolas/TDS/TP2/racine.c -o /home/nicolas/TDS/TP2/racine.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP2/pi.c",
+  "directory": "/home/nicolas/TDS/TP2",
+  "command": "gcc -c /home/nicolas/TDS/TP2/pi.c -o /home/nicolas/TDS/TP2/pi.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP2/reaction.c",
+  "directory": "/home/nicolas/TDS/TP2",
+  "command": "gcc -c /home/nicolas/TDS/TP2/reaction.c -o /home/nicolas/TDS/TP2/reaction.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP2/soiree.c",
+  "directory": "/home/nicolas/TDS/TP2",
+  "command": "gcc -c /home/nicolas/TDS/TP2/soiree.c -o /home/nicolas/TDS/TP2/soiree.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP3/jeu_de_la_vie.c",
+  "directory": "/home/nicolas/TDS/TP3",
+  "command": "gcc -c /home/nicolas/TDS/TP3/jeu_de_la_vie.c -o /home/nicolas/TDS/TP3/jeu_de_la_vie.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/TP4/enigma.c",
+  "directory": "/home/nicolas/TDS/TP4",
+  "command": "gcc -c /home/nicolas/TDS/TP4/enigma.c -o /home/nicolas/TDS/TP4/enigma.c.o  -g  -O0  -Wall -I. -I."
+ }, {
+  "file": "/home/nicolas/TDS/Tests/main.c",
+  "directory": "/home/nicolas/TDS/Tests",
+  "command": "gcc -c /home/nicolas/TDS/Tests/main.c -o /home/nicolas/TDS/Tests/main.c.o  -g  -O0  -Wall -I. -I."
+ }]
