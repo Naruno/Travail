@@ -3,34 +3,34 @@
 #include <stdlib.h>
 #include <stdlib.h>
 
-int longueurChaine(char *chaine) {
+int longueurChaine(char *p_chaine) {
 
-	if (!chaine) {
+	if (!p_chaine) {
 		printf("La chaine n'est pas valide\n");
 		return 0;
 	}
 	int i = 0;
-	while (chaine[i] != NULL) {
+	while (p_chaine[i] != NULL) {
 		i++;
 	}
 	//printf("%s fait %d characteres\n", chaine, i);
 	return i;
 }
 
-int longueurChaineRec(char *chaine, int i) {
+int longueurChaineRec(char *p_chaine, int p_i) {
 	
-	if (!chaine[i]) {
-		printf("%s fait %d characteres\n", chaine, i);
-		return i;
+	if (!p_chaine[p_i]) {
+		printf("%s fait %d characteres\n", p_chaine, p_i);
+		return p_i;
 	}
 	else {
-		longueurChaineRec(chaine, i + 1);
+		longueurChaineRec(p_chaine, p_i + 1);
 	}
 }
 
-char* copieChaine(char* chaine) {
+char* copieChaine(char* p_chaine) {
 	
-	int taille = longueurChaineRec(chaine, 0), i = 0;	
+	int taille = longueurChaineRec(p_chaine, 0), i = 0;	
 	char* copie = (char*)calloc(taille+1, sizeof(char));
 	if (!copie) {
 		printf("Erreur lors de l'allocation memoire de la chaine copie\n");
@@ -38,48 +38,48 @@ char* copieChaine(char* chaine) {
 	}
 	for (i = 0; i <= taille ; i++) {
 		
-		copie[i] = chaine[i];	    
+		copie[i] = p_chaine[i];	    
 	}
 	copie[taille] = '\0';
 	return copie;
 }
 
-void copieChaineRec(char* chaine, char* copie) {
-	copie[0] = chaine[0];
-	if (!chaine[0]) {
+void copieChaineRec(char* p_chaine, char* p_copie) {
+	p_copie[0] = p_chaine[0];
+	if (!p_chaine[0]) {
 		return;
 	}
 	else {
-		copieChaineRec(chaine + 1, copie + 1);	
+		copieChaineRec(p_chaine + 1, p_copie + 1);
 	}
 }
 
-int compareChaine(char* chaine, char* chaine2) {
+int compareChaine(char* p_chaine, char* p_chaine2) {
 
-	int taille = longueurChaine(chaine) + 1, i = 0;
+	int taille = longueurChaine(p_chaine) + 1, i = 0;
 	for (i = 0; i < taille; i++) {
 
-		if (chaine[0] != chaine2[0]) {
+		if (p_chaine[0] != p_chaine2[0]) {
 			return 0;
 		}		
 		return 1;
 	}
 }
-int compareChaineRec(char* chaine, char* chaine2) {
+int compareChaineRec(char* p_chaine, char* p_chaine2) {
 
-	if (!chaine[0] && !chaine2[0]) {
+	if (!p_chaine[0] && !p_chaine2[0]) {
 		return 1;
 	}
-	if (chaine[0] != chaine2[0] || !chaine[0] || !chaine[0]) {
+	if (p_chaine[0] != p_chaine2[0] || !p_chaine[0] || !p_chaine[0]) {
 		return 0;
 	}
 	else {
-		compareChaineRec(chaine + 1, chaine2 + 1);
+		compareChaineRec(p_chaine + 1, p_chaine2 + 1);
 	}
 }
 
-char* inverserChaine(char* chaine) {
-	int taille = longueurChaine(chaine), i = 0;
+char* inverserChaine(char* p_chaine) {
+	int taille = longueurChaine(p_chaine), i = 0;
 
 	char* inverse = (char*) calloc(taille + 1, sizeof(char));
 	if (!inverse) {
@@ -88,36 +88,36 @@ char* inverserChaine(char* chaine) {
 	}
 
 	for (i = 0; i < taille; i++) {	
-		inverse[i] = chaine[taille - i - 1];		
+		inverse[i] = p_chaine[taille - i - 1];		
 	}
 	inverse[taille] = '\0';	
 	return inverse;
 }
 
-void inverserChaineRec(char* chaine, char* chaine2, int taille) {
+void inverserChaineRec(char* p_chaine, char* p_chaine2, int p_taille) {
 	
-	if (!chaine[0]) {
+	if (!p_chaine[0]) {
 		return;
 	}
-	chaine2[taille - 1] = chaine[0];
-	inverserChaineRec(chaine + 1, chaine2, taille - 1);
+	p_chaine2[p_taille - 1] = p_chaine[0];
+	inverserChaineRec(p_chaine + 1, p_chaine2, p_taille - 1);
 }
 
-char* trouverSousChaine(char* chaine, char* souschaine) {
-	int t_souschaine = longueurChaine(souschaine), t_chaine = longueurChaine(chaine);
+char* trouverSousChaine(char* p_chaine, char* souschaine) {
+	int t_souschaine = longueurChaine(souschaine), t_chaine = longueurChaine(p_chaine);
 	int i = 0, a = 0, test = 0;
 	
-	while (chaine != NULL && i + t_souschaine <= t_chaine) {
+	while (p_chaine != NULL && i + t_souschaine <= t_chaine) {
 
-		if (*chaine == souschaine[0] && t_souschaine > 1) {
+		if (*p_chaine == souschaine[0] && t_souschaine > 1) {
 			
 			for (a = 0; a < t_souschaine; a++) {
 				
-				if (*(chaine + a) == souschaine[a]) {
+				if (*(p_chaine + a) == souschaine[a]) {
 					test++;	
 					if (test == t_souschaine - 1) {
 						
-						return chaine;
+						return p_chaine;
 					}
 				}
 				else {
@@ -126,63 +126,63 @@ char* trouverSousChaine(char* chaine, char* souschaine) {
 				}			
 			}
 		}
-		if (*chaine == souschaine[0] && t_souschaine == 1) {
-			return chaine;
+		if (*p_chaine == souschaine[0] && t_souschaine == 1) {
+			return p_chaine;
 		}
 		i++;
-		chaine++;
+		p_chaine++;
 	}
 	return NULL;
 }
 
-char* trouverSousChaineRec(char* chaine, char* souschaine, int t_chaine, int t_souschaine, int i) {
+char* trouverSousChaineRec(char* p_chaine, char* p_souschaine, int p_t_chaine, int p_t_souschaine, int p_i) {
 	int a = 0;
 
-	if (*chaine == NULL || i + t_souschaine > t_chaine) {
+	if (*p_chaine == NULL || p_i + p_t_souschaine > p_t_chaine) {
 		return NULL;
 	}	
-	if (*chaine == *souschaine) {
-		if (t_souschaine == 1) {
-			return chaine;
+	if (*p_chaine == *p_souschaine) {
+		if (p_t_souschaine == 1) {
+			return p_chaine;
 		}
-		for (a = 0; a < t_souschaine; a++) {
+		for (a = 0; a < p_t_souschaine; a++) {
 
-			if (*(chaine + a) == souschaine[a]) {													
+			if (*(p_chaine + a) == p_souschaine[a]) {
 				continue;
 			}
 			else {				
 				return NULL;
 			}
 		}
-		return chaine;
+		return p_chaine;
 	}
-	return trouverSousChaineRec(chaine + 1, souschaine, t_chaine, t_souschaine, i + 1);
+	return trouverSousChaineRec(p_chaine + 1, p_souschaine, p_t_chaine, p_t_souschaine, p_i + 1);
 }
 
-void libererChaine(char * chaine) {
-	if (chaine) {
-		free(chaine);
+void libererChaine(char * p_chaine) {
+	if (p_chaine) {
+		free(p_chaine);
 	}
 }
 
-char* trim(char* chaine, char* charactere) {
+char* trim(char* p_chaine, char* p_charactere) {
 
-	char* occurence = trouverSousChaine(chaine, charactere);
+	char* occurence = trouverSousChaine(p_chaine, p_charactere);
 	if (!occurence) {
-		return chaine;
+		return p_chaine;
 	}
-	int compteur = 0, i = 0, a = 0, taille = longueurChaine(chaine);
+	int compteur = 0, i = 0, a = 0, taille = longueurChaine(p_chaine);
 
 	while (occurence != NULL){			
-		occurence = trouverSousChaine(occurence + 1, charactere);		
+		occurence = trouverSousChaine(occurence + 1, p_charactere);
 		compteur++;		
 	} 
 	occurence = NULL;
 	occurence = (char*)calloc(taille - compteur + 1, sizeof(char));	
 
 	for(i = 0; i < taille; i++) {		
-		if (chaine[i] != charactere[0]) {			
-			occurence[a] = chaine[i];				
+		if (p_chaine[i] != p_charactere[0]) {
+			occurence[a] = p_chaine[i];				
 			a++;
 		}					
 	}
@@ -190,14 +190,32 @@ char* trim(char* chaine, char* charactere) {
 	return occurence;
 }
 
-int palindrome(char* chaine) {
+int palindrome(char* p_chaine) {
 
-	if (compareChaine(chaine,inverserChaine(chaine))) {
+	if (compareChaine(p_chaine,inverserChaine(p_chaine))) {
 		return 1;
 	}
 	else {
 		return 0;
 	}
+}
+
+int findFirstOf(char* p_chaine, char* p_chaine2) {
+
+	int t_p_chaine = longueurChaine(p_chaine), t_p_chaine2 = longueurChaine(p_chaine2), i = 0, j = 0;
+	printf("t_pchaine = %d\n", t_p_chaine);
+	for (i = 0; i < t_p_chaine; i++) {
+		printf("i = %d\n", i);
+		for (j = 0; j < t_p_chaine2; j++) {
+			printf("j = %d\n", j);
+			if (p_chaine[i] == p_chaine2[j]) {
+				return i;
+			}
+		}
+
+	}
+	printf("Aucune occurence trouvee\n");
+	return -1;
 }
 
 #endif 

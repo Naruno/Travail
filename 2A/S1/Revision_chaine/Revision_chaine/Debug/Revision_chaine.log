@@ -1,2 +1,7 @@
-﻿  main.c
-  Revision_chaine.vcxproj -> C:\Users\nicol\source\Programmation\C\2A\S1\Revision_chaine\Debug\Revision_chaine.exe
+﻿  chaineCaractere.c
+c:\users\nicol\source\programmation\travail\2a\s1\revision_chaine\revision_chaine\chainecaractere.c(13): warning C4047: '!=': 'int' differs in levels of indirection from 'void *'
+c:\users\nicol\source\programmation\travail\2a\s1\revision_chaine\revision_chaine\chainecaractere.c(141): warning C4047: '==': 'int' differs in levels of indirection from 'void *'
+c:\users\nicol\source\programmation\travail\2a\s1\revision_chaine\revision_chaine\chainecaractere.c(29): warning C4715: 'longueurChaineRec': not all control paths return a value
+c:\users\nicol\source\programmation\travail\2a\s1\revision_chaine\revision_chaine\chainecaractere.c(67): warning C4715: 'compareChaine': not all control paths return a value
+c:\users\nicol\source\programmation\travail\2a\s1\revision_chaine\revision_chaine\chainecaractere.c(79): warning C4715: 'compareChaineRec': not all control paths return a value
+  Revision_chaine.vcxproj -> C:\Users\nicol\source\Programmation\Travail\2A\S1\Revision_chaine\Debug\Revision_chaine.exe
