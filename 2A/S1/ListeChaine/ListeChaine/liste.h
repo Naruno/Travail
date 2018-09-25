@@ -1,27 +1,25 @@
 typedef struct Element Element;
-struct Element{
+struct Element {
 
-	int m_nombre;
-	Element* m_suivant;
+	int m_data;
+	Element* m_next;
 };
 
-typedef struct Liste Liste;
-struct Liste {
+Element* createListNode(int p_value);
+void freeList(Element * p_pRoot);
+Element* addFirst(Element* p_pRoot, int p_value);
+Element* pop(Element* p_pRoot, int* p_result);
 
-	Element *m_premier;
-};
+Element* addLast(Element* p_pRoot, int p_value);
+Element* suppressionF(Element* p_pRoot); // A Corriger.
 
-Liste* initialisation();
-void dInsertion(Liste* p_liste, int p_nombre);
-void dSuppression(Liste* p_liste);
+Element* insertionFRec(Element* p_element, Element* p_nouveau); // A Verifier.
+Element* suppressionFRec(Element* p_element); // A Verifier
 
-void insertionF(Liste* p_liste, int p_nombre);
-void suppressionF(Liste* p_liste);
+void printList(Element* p_pRoot);
 
-Element* insertionFRec(Element* p_element, Element* p_nouveau);
-Element* suppressionFRec(Element* p_element);
 
-void afficherListe(Liste* p_liste);
+Element* addSortAsc(Element* p_element, int p_value);
+void addSortAsco(Element** p_element, int p_value);
 
-Element* ajoutTriCroissant(Element* p_element, Element* p_nouveau);
-void ajoutTriCroissanto(Element** p_element, Element* p_nouveau);
+Element* addSortDesc(Element* p_element, int p_value);

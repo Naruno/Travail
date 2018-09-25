@@ -1,1 +1,0 @@
-./Debug/exponentielle.c.o ./Debug/permute1.c.o ./Debug/permute2.c.o ./Debug/permute3.c.o
