@@ -7,19 +7,17 @@ struct Element {
 
 Element* createListNode(int p_value);
 void freeList(Element * p_pRoot);
+
 Element* addFirst(Element* p_pRoot, int p_value);
-Element* pop(Element* p_pRoot, int* p_result);
-
 Element* addLast(Element* p_pRoot, int p_value);
-Element* suppressionF(Element* p_pRoot); // A Corriger.
-
-Element* insertionFRec(Element* p_element, Element* p_nouveau); // A Verifier.
-Element* suppressionFRec(Element* p_element); // A Verifier
-
-void printList(Element* p_pRoot);
-
 
 Element* addSortAsc(Element* p_element, int p_value);
 void addSortAsco(Element** p_element, int p_value);
-
 Element* addSortDesc(Element* p_element, int p_value);
+
+Element* pop(Element* p_pRoot, int* p_result);
+Element* popLast(Element* p_element);
+
+int listLength(Element * p_pRoot);
+void printList(Element* p_pRoot);
+Element * at(Element * p_pRoot, int p_index);

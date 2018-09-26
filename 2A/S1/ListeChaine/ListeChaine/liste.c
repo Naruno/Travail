@@ -55,6 +55,10 @@ Element* addLast(Element* p_pRoot, int p_value) {
 
 void freeList(Element * p_pRoot) {
 	
+	if (!p_pRoot) {
+		printf("Impossible de libérer une liste vide.\n");
+		exit(EXIT_FAILURE);
+	}
 	Element* actuel = p_pRoot;
 	Element* suivant = p_pRoot;
 	while (actuel->m_next != NULL) {
@@ -65,56 +69,22 @@ void freeList(Element * p_pRoot) {
 	}	
 }
 
-Element* insertionFRec(Element* p_element, Element* p_nouveau) {
-	// Cette fonction ajoute un élément en fin de liste de manière récursive.
-	if (!p_nouveau) {
-		return p_element;
-	}
-	if (!p_element) {
-
-		p_nouveau->m_next = p_element;
-		return p_nouveau;
-	}
-	else {
-		p_element->m_next = insertionFRec(p_element->m_next, p_nouveau);
-		return p_element;
-	}
-}
-
-Element* suppressionF(Element* p_pRoot) {
-	// Cette fonction supprime un élément en fin de liste.	
-
-	//Element* actuel = (Element*)calloc(1, sizeof(*actuel));
-	Element* actuel = p_pRoot;
-	if (!actuel) {
-		printf("Impossible de supprimer une élément d'une liste vide.\n");
-		exit(EXIT_FAILURE);
-	}
-
-	//actuel = p_pRoot;
-	while (actuel->m_next->m_next != NULL) {
-
-		actuel = actuel->m_next;
-	}
-
-	Element* aSupprimer = actuel->m_next;
-	actuel->m_next = NULL;
-	free(aSupprimer);
-	return actuel;
-}
-
-Element* suppressionFRec(Element* p_element) {
+Element* popLast(Element* p_element) {
 	// Cette fonction supprime un élément en fin de liste de maniere recursive.	
 
+	if (!p_element) {
+		printf("Impossible de supprimer un noeud d'une liste vide.\n");
+		exit(EXIT_FAILURE);
+	}	
 	if (!p_element->m_next) {
 
 		Element* aSupprimer = p_element;
 		p_element = NULL;
 		free(aSupprimer);
-		return NULL;
+		return p_element;
 	}
 	else {
-		p_element->m_next = suppressionFRec(p_element->m_next);
+		p_element->m_next = popLast(p_element->m_next);
 		return p_element;
 	}
 }
@@ -176,4 +146,37 @@ Element* addSortDesc(Element* p_element, int p_value) {
 		p_element->m_next = addSortDesc(p_element->m_next, p_value);
 		return p_element;
 	}
+}
+
+int listLength(Element * p_pRoot) {	
+	int taille = 0;
+	Element* actuel = p_pRoot;
+	while (actuel != NULL){
+
+		actuel = actuel->m_next;
+		taille++;
+	}
+	return taille;
+}
+
+Element* at(Element * p_pRoot, int p_index) {
+	int i = 0;
+
+	if (!p_pRoot) {
+		printf("Impossible de trouver la valeur d'un indice dans une liste vide.\n");
+		exit(EXIT_FAILURE);
+	}
+	Element *reponse = p_pRoot;
+	if (p_index < listLength(p_pRoot)) {
+		
+		for (i = 0; i < p_index; i++) {
+			reponse = reponse->m_next;
+		}
+		//reponse->m_next = NULL; // On demande uniquement le noeud, ou tout ce qu'il y a à partir du noeud ?
+		return reponse;
+	}
+	else {
+		printf("Cet indexe n'existe pas dans la liste.\nLa liste entiere sera renvoyee.\n");
+		return p_pRoot;
+	}	
 }
