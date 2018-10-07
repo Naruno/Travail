@@ -3,39 +3,39 @@
 #include <Windows.h>
 #include <stdio.h>
 
-Element* createListNode(int p_value) {
-	// Cette fonction initialise une liste avec un premier element egal à 0.	
-	Element* element = (Element*)calloc(1, sizeof(*element));
+node* createListNode(void* p_value) {
+	// Cette fonction initialise une liste avec un premier node egal à 0.	
+	node* noeud = (node*)calloc(1, sizeof(*noeud));
 
-	if (!element) {
-		printf("Erreur lors de l'allocation de list ou element.\n");
+	if (!noeud) {
+		printf("Erreur lors de l'allocation de list ou node.\n");
 		exit(EXIT_FAILURE);
 	}
-	element->m_data = p_value;
-	element->m_next = NULL;
+	noeud->m_data = p_value;
+	noeud->m_next = NULL;
 	
-	return element;
+	return noeud;
 }
 
-Element* addFirst(Element* p_pRoot, int p_value) {
+node* addFirst(node* p_pRoot, void* p_value) {
 	// Cette fonction ajoute un élément en début de liste.
-	Element* nouveau = createListNode(p_value);
+	node* nouveau = createListNode(p_value);
 	if (!p_pRoot || !nouveau) {
-		printf("Impossible d'inserer un element dans une liste vide ou Erreur d'allocation du nouvel element.\n");
+		printf("Impossible d'inserer un node dans une liste vide ou Erreur d'allocation du nouvel node.\n");
 		exit(EXIT_FAILURE);
 	}	
 	nouveau->m_next = p_pRoot;	
 	return nouveau;
 }
 
-Element* pop(Element* p_pRoot, int* p_result) {
+node* pop(node* p_pRoot, void** p_result) {
 	// Cette fonction supprime un élément en début de liste.
 	if (!p_pRoot) {
 		printf("Impossible de supprimer une élément d'une liste vide.\n");
 		exit(EXIT_FAILURE);
 	}
 	else{
-		Element* aSupprimer = p_pRoot;
+		node* aSupprimer = p_pRoot;
 		*p_result = p_pRoot->m_data;
 		p_pRoot = p_pRoot->m_next;
 		free(aSupprimer);
@@ -43,7 +43,7 @@ Element* pop(Element* p_pRoot, int* p_result) {
 	}
 }
 
-Element* addLast(Element* p_pRoot, int p_value) {
+node* addLast(node* p_pRoot, void* p_value) {
 	// Cette fonction ajoute un élément en fin de liste de manière récursive.	
 	
 	if (!p_pRoot ) {		
@@ -53,104 +53,102 @@ Element* addLast(Element* p_pRoot, int p_value) {
 	return p_pRoot;
 }
 
-void freeList(Element * p_pRoot) {
+void freeList(node * p_pRoot) {
 	
 	if (!p_pRoot) {
-		printf("Impossible de libérer une liste vide.\n");
-		exit(EXIT_FAILURE);
+		return;
 	}
-	Element* actuel = p_pRoot;
-	Element* suivant = p_pRoot;
-	while (actuel->m_next != NULL) {
-		suivant = suivant->m_next;
-		actuel = NULL;
-		free(actuel);
-		actuel = suivant;
-	}	
+	freeList(p_pRoot->m_next);
+	free(p_pRoot);
 }
 
-Element* popLast(Element* p_element) {
+node* popLast(node* p_node) {
 	// Cette fonction supprime un élément en fin de liste de maniere recursive.	
 
-	if (!p_element) {
+	if (!p_node) {
 		printf("Impossible de supprimer un noeud d'une liste vide.\n");
 		exit(EXIT_FAILURE);
 	}	
-	if (!p_element->m_next) {
+	if (!p_node->m_next) {
 
-		Element* aSupprimer = p_element;
-		p_element = NULL;
+		node* aSupprimer = p_node;
+		p_node = NULL;
 		free(aSupprimer);
-		return p_element;
+		return p_node;
 	}
 	else {
-		p_element->m_next = popLast(p_element->m_next);
-		return p_element;
+		p_node->m_next = popLast(p_node->m_next);
+		return p_node;
 	}
 }
 
-void printList(Element* p_pRoot) {
+void printList_int(node* p_pRoot) {
 	// Cette fonction affiche une liste.
 	if (!p_pRoot) {
-		printf("Impossible d'afficher une liste vide.\n");
-		exit(EXIT_FAILURE);
+		printf("NULL\n");
+		return;
 	}
-	Element* actuel = p_pRoot;
-	while (actuel) {
-		printf("%d -> ", actuel->m_data);
-		actuel = actuel->m_next;
+	printf("%d -> ", (int*)p_pRoot->m_data);
+	printList_int(p_pRoot->m_next);
+}
+void printList_str(node* p_pRoot) {
+	// Cette fonction affiche une liste.
+	if (!p_pRoot) {
+		printf("NULL\n");
+		return;
 	}
-	printf("NULL\n");
+	printf("%s -> ", (char**)p_pRoot->m_data);
+	printList_str(p_pRoot->m_next);
 }
 
-Element* addSortAsc(Element* p_element, int p_value) {
-	// Cette fonction insere un element en respectant l'ordre du membre m_data.	
-	if (!p_element || p_value < p_element->m_data) {
+node* addSortAsc(node* p_node, void* p_value) {
+	// Cette fonction insere un node en respectant l'ordre du membre m_data.	
+	if (!p_node || p_value < p_node->m_data) {
 
-		Element* nouveau = createListNode(p_value);
-		nouveau->m_next = p_element;
+		node* nouveau = createListNode(p_value);
+		nouveau->m_next = p_node;
 		return nouveau;
 	}
 	else {
-		p_element->m_next = addSortAsc(p_element->m_next, p_value);
-		return p_element;
+		p_node->m_next = addSortAsc(p_node->m_next, p_value);
+		return p_node;
 	}
 }
 
-void addSortAsco(Element** p_element, int p_value) {
-	// Cette fonction insere un element en respectant l'ordre du membre m_data en utilisant un passage par adresse.
+void addSortAsco(node** p_node, void* p_value) {
+	// Cette fonction insere un node en respectant l'ordre du membre m_data en utilisant un passage par adresse.
 	
-	if (!p_element || p_value < (*p_element)->m_data) {
+	if (!p_node || p_value < (*p_node)->m_data) {
 
-		Element* nouveau = createListNode(p_value);
-		nouveau->m_next = *p_element;
-		*p_element = nouveau;
+		node* nouveau = createListNode(p_value);
+		nouveau->m_next = *p_node;
+		*p_node = nouveau;
 		return;
 	}
 	else {
-		addSortAsco(&((*p_element)->m_next), p_value);
+		addSortAsco(&((*p_node)->m_next), p_value);
 		return;
 	}
 }
 
-Element* addSortDesc(Element* p_element, int p_value) {
+node* addSortDesc(node* p_node, void* p_value) {
 
-	// Cette fonction insere un element en respectant l'ordre décroissant du membre m_data.	
-	if (!p_element || p_value > p_element->m_data) {
+	// Cette fonction insere un node en respectant l'ordre décroissant du membre m_data.	
+	if (!p_node || p_value > p_node->m_data) {
 
-		Element* nouveau = createListNode(p_value);
-		nouveau->m_next = p_element;
+		node* nouveau = createListNode(p_value);
+		nouveau->m_next = p_node;
 		return nouveau;
 	}
 	else {
-		p_element->m_next = addSortDesc(p_element->m_next, p_value);
-		return p_element;
+		p_node->m_next = addSortDesc(p_node->m_next, p_value);
+		return p_node;
 	}
 }
 
-int listLength(Element * p_pRoot) {	
+int listLength(node * p_pRoot) {	
 	int taille = 0;
-	Element* actuel = p_pRoot;
+	node* actuel = p_pRoot;
 	while (actuel != NULL){
 
 		actuel = actuel->m_next;
@@ -159,24 +157,60 @@ int listLength(Element * p_pRoot) {
 	return taille;
 }
 
-Element* at(Element * p_pRoot, int p_index) {
+node* at(node * p_pRoot, int p_index) {
 	int i = 0;
 
 	if (!p_pRoot) {
 		printf("Impossible de trouver la valeur d'un indice dans une liste vide.\n");
 		exit(EXIT_FAILURE);
 	}
-	Element *reponse = p_pRoot;
+	node *reponse = p_pRoot;
 	if (p_index < listLength(p_pRoot)) {
 		
 		for (i = 0; i < p_index; i++) {
 			reponse = reponse->m_next;
 		}
-		//reponse->m_next = NULL; // On demande uniquement le noeud, ou tout ce qu'il y a à partir du noeud ?
+		
 		return reponse;
 	}
 	else {
 		printf("Cet indexe n'existe pas dans la liste.\nLa liste entiere sera renvoyee.\n");
 		return p_pRoot;
 	}	
+}
+
+void Hanoi(int n, node* D, node* A, node* I) {
+	int value;
+	if (n != 0) {
+		Hanoi(n - 1, D, I, A);
+		D = pop(D, &value);
+		A = addFirst(A, value);
+
+		Hanoi(n - 1, I, A, D);
+	}	
+}
+
+void Test_List() {
+
+	node* maListe = createListNode(2);
+	node* res;
+	int a = 0;
+	printList_int(maListe);
+
+	maListe = addLast(maListe, 10);
+	printList_int(maListe);
+	addSortAsco(&maListe, 7);
+	maListe = addLast(maListe, 99);
+	printList_int(maListe);
+	a = listLength(maListe);
+	res = at(maListe, a - 1);
+
+	printf("taille liste = %d\n", a);
+	printList_int(res);
+	printList_int(maListe);
+	maListe = pop(maListe, &a);
+	printList_int(maListe);
+	system("pause");
+
+	freeList(maListe);
 }

@@ -1,23 +1,29 @@
-typedef struct Element Element;
-struct Element {
+#pragma once
+typedef struct node node;
+struct node {
 
-	int m_data;
-	Element* m_next;
+	void* m_data;
+	node* m_next;
 };
 
-Element* createListNode(int p_value);
-void freeList(Element * p_pRoot);
+node* createListNode(void* p_value);
+void freeList(node * p_pRoot);
 
-Element* addFirst(Element* p_pRoot, int p_value);
-Element* addLast(Element* p_pRoot, int p_value);
+node* addFirst(node* p_pRoot, void* p_value);
+node* addLast(node* p_pRoot, void* p_value);
 
-Element* addSortAsc(Element* p_element, int p_value);
-void addSortAsco(Element** p_element, int p_value);
-Element* addSortDesc(Element* p_element, int p_value);
+node* addSortAsc(node* p_node, void* p_value);
+void addSortAsco(node** p_node, void* p_value);
+node* addSortDesc(node* p_node, void* p_value);
 
-Element* pop(Element* p_pRoot, int* p_result);
-Element* popLast(Element* p_element);
+node* pop(node* p_pRoot, void** p_result); 
+node* popLast(node* p_node);
 
-int listLength(Element * p_pRoot);
-void printList(Element* p_pRoot);
-Element * at(Element * p_pRoot, int p_index);
+int listLength(node * p_pRoot);
+void printList_int(node* p_pRoot);
+void printList_str(node* p_pRoot);
+node* at(node * p_pRoot, int p_index);
+
+void Hanoi(int n, node* D, node* A, node* I);
+
+void Test_List();

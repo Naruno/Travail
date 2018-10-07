@@ -4,10 +4,16 @@
 #include <Windows.h>
 
 int main() {
-	char *chaine = "C'etait bien_le WEI !?! ", *min = NULL;
+	char *chaine = "4 5 + 3 10 5 / - x", *s_chaine = "+-x/";
+	char **tab = NULL;
+	int i = 0, a = 0;
 	printf("%s\n", chaine);
-	min = inverseCase(chaine);
-	printf("%s\n", min);
+	tab = split(chaine, s_chaine, &a);
+	
+	for (i = 0; i < a; i++) {
+		printf("[%s]", tab[i]);
+	}
+	printf("\n");
 
 	system("pause");	
 	

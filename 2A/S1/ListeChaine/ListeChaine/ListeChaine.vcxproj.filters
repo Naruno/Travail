@@ -21,10 +21,22 @@
     <ClCompile Include="liste.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="piles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="application.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="liste.h">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="piles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="application.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

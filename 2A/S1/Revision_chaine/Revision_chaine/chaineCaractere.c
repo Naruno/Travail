@@ -166,7 +166,7 @@ void libererChaine(char * p_chaine) {
 }
 
 char* trim(char* p_chaine, char* p_charactere) {
-
+	// Enlève des charactères d'une chaine.
 	char* occurence = trouverSousChaine(p_chaine, p_charactere);
 	if (!occurence) {
 		return p_chaine;
