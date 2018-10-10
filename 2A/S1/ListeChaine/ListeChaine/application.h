@@ -1,3 +1,7 @@
+#ifndef APPLICATION_H
+#define APPLICATION_H
 #pragma once
-int calculatrice(char* p_calcul);
+int calculatrice_polonaise(char* p_calcul);
 void Test_Calculatrice();
+int calculatrice_infixe();
+#endif

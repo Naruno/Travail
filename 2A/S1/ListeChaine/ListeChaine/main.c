@@ -1,17 +1,13 @@
 #pragma once
-#include <Windows.h>
 #include "liste.h"
 #include "piles.h"
 #include "application.h"
+#include "arbres.h"
 
-int main()
-{
-	node* test = createListNode("Bonjour");
-	addLast(test, "je");
-	addLast(test, "me");
-	addLast(test, "nomme");
-	addLast(test, "055");
-	printList_str(test);
+int main(){
+	
+	int res = calculatrice_infixe();
+	printf("Resultat : %d\n", res);
 	system("pause");
 	return 0;
 }

@@ -1,3 +1,6 @@
+#ifndef LISTE_H	
+#define LISTE_H
+
 #pragma once
 typedef struct node node;
 struct node {
@@ -27,3 +30,4 @@ node* at(node * p_pRoot, int p_index);
 void Hanoi(int n, node* D, node* A, node* I);
 
 void Test_List();
+#endif

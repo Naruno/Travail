@@ -116,12 +116,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="application.c" />
+    <ClCompile Include="arbres.c" />
     <ClCompile Include="liste.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="piles.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
+    <ClInclude Include="arbres.h" />
     <ClInclude Include="liste.h" />
     <ClInclude Include="piles.h" />
   </ItemGroup>
