@@ -1,20 +1,2 @@
-﻿  application.c
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(26): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(37): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(44): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(51): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(58): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(66): warning C4047: 'return': 'int' differs in levels of indirection from 'void *'
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(78): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(132): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(141): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(145): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(149): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(153): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(162): warning C4047: '=': 'char' differs in levels of indirection from 'void *'
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(168): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(172): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(176): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(180): warning C4022: 'createListNode': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\application.c(187): warning C4047: '=': 'int' differs in levels of indirection from 'void *'
+﻿  arbres.c
   ListeChaine.vcxproj -> C:\Users\nicol\source\Programmation\Travail\2A\S1\ListeChaine\Debug\ListeChaine.exe

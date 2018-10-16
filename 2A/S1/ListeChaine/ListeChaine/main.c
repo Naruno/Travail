@@ -6,8 +6,7 @@
 
 int main(){
 	
-	int res = calculatrice_infixe();
-	printf("Resultat : %d\n", res);
+	testTree();
 	system("pause");
 	return 0;
 }
