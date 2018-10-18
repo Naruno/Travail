@@ -3,7 +3,7 @@
 #include <Windows.h>
 #include <stdio.h>
 
-treeNode * creerNoeudArbre(int p_value) {
+treeNode * creerNoeudArbre(void* p_value, int type) {
 
 	treeNode* noeud = (treeNode*)calloc(1, sizeof(*noeud));
 
@@ -11,7 +11,12 @@ treeNode * creerNoeudArbre(int p_value) {
 		printf("Erreur lors de l'allocation de list ou node.\n");
 		return NULL;
 	}
-	noeud->m_data = p_value;
+	if (type != 0 && type != 1) {
+		printf("Veuillez spécifier le type correctement :\n- 0 : char\n- 1 : int\n");
+		return NULL;
+	}
+	noeud->type = type;	
+	noeud->m_data = p_value;	
 	noeud->m_left = NULL;
 	noeud->m_right = NULL;
 
@@ -24,29 +29,37 @@ void libererArbre(treeNode ** p_ppRoot) {
 		return;
 	}
 	libererArbre(&(*p_ppRoot)->m_left);
-	libererArbre(&(*p_ppRoot)->m_right);;
+	libererArbre(&(*p_ppRoot)->m_right);	
 	free(*p_ppRoot);
 	*p_ppRoot = NULL;
 	return;
 }
 
-void ajoutGauche(treeNode * p_pRoot, int p_value) {
+void ajoutGauche(treeNode * p_pRoot, void* p_value, int type) {
 
 	if (!p_pRoot) {
-		printf("Le noeud n'existe pas\n"); // OK ?
+		printf("Le noeud n'existe pas\n");
 		return;
 	}
-	p_pRoot->m_left = creerNoeudArbre(p_value);
+	if (p_pRoot->m_left) {
+		ajoutGauche(p_pRoot->m_left, p_value, type);
+		return;
+	}
+	p_pRoot->m_left = creerNoeudArbre(p_value, type);
 
 }
 
-void ajoutDroite(treeNode * p_pRoot, int p_value) {
+void ajoutDroite(treeNode * p_pRoot, void* p_value, int type) {
 
-	if (!p_pRoot || p_pRoot->m_right ) {
-		printf("Le noeud n'existe pas\n"); // OK ?
+	if (!p_pRoot) {
+		printf("Le noeud n'existe pas\n");
 		return;
 	}
-	p_pRoot->m_right = creerNoeudArbre(p_value);
+	if (p_pRoot->m_right) {
+		ajoutDroite(p_pRoot->m_right, p_value, type);
+		return;
+	}
+	p_pRoot->m_right = creerNoeudArbre(p_value, type);
 	
 }
 
@@ -94,13 +107,23 @@ void supprSousArbre(treeNode ** p_ppRoot, int p_value) {
 	}
 	supprSousArbre(&(*p_ppRoot)->m_left, p_value);
 	supprSousArbre(&(*p_ppRoot)->m_right, p_value);
-
+}
+void afficher_noeud(treeNode * p_pRoot) {
+	if (!p_pRoot) {
+		return;
+	}
+	if (p_pRoot->type == 1) {
+		printf("[%d]", (int)p_pRoot->m_data);
+	}
+	else {
+		printf("\"%c\"", (char)p_pRoot->m_data);
+	}
 }
 
 void parcoursPrefixe(treeNode * p_pRoot) {
 
 	if (p_pRoot) {	
-		printf("[%d]", p_pRoot->m_data);
+		afficher_noeud(p_pRoot);
 		if (p_pRoot->m_left) {
 			parcoursPrefixe(p_pRoot->m_left);
 		}
@@ -113,13 +136,13 @@ void parcoursPrefixe(treeNode * p_pRoot) {
 void parcoursInfixe(treeNode * p_pRoot) {
 
 	if ((!p_pRoot->m_left) && (!p_pRoot->m_right)) {
-		printf("[%d]", p_pRoot->m_data);
+		afficher_noeud(p_pRoot);
 		return;
 	}
 	if (p_pRoot->m_left) {
 		parcoursInfixe(p_pRoot->m_left);
 	}
-	printf("[%d]", p_pRoot->m_data);
+	afficher_noeud(p_pRoot);
 	if (p_pRoot->m_right) {
 		parcoursInfixe(p_pRoot->m_right);
 	}
@@ -128,7 +151,7 @@ void parcoursInfixe(treeNode * p_pRoot) {
 void parcoursPostfixe(treeNode * p_pRoot) {
 
 	if ((!p_pRoot->m_left) && (!p_pRoot->m_right)) {
-		printf("[%d]", p_pRoot->m_data);
+		afficher_noeud(p_pRoot);
 		return;
 	}
 	if (p_pRoot->m_left) {
@@ -137,29 +160,37 @@ void parcoursPostfixe(treeNode * p_pRoot) {
 	if (p_pRoot->m_right) {
 		parcoursPostfixe(p_pRoot->m_right);		
 	}
-	printf("[%d]", p_pRoot->m_data);	
+	afficher_noeud(p_pRoot);
+}
+
+void afficher_Arbre(treeNode * p_pRoot, int profondeur) {
+	if (!p_pRoot) {		
+		return;
+	}
+	int i = 0;
+	afficher_Arbre(p_pRoot->m_right, profondeur + 1);
+	for (i = 0; i < profondeur; i++) {
+		printf("    ");
+	}
+	afficher_noeud(p_pRoot);
+	printf("\n");
+	afficher_Arbre(p_pRoot->m_left, profondeur + 1);	
 }
 
 void testTree() {
 
-	treeNode * arbre = creerNoeudArbre(1);
-	ajoutGauche(arbre, 2);
-	ajoutDroite(arbre, 5);
+	treeNode * arbre = creerNoeudArbre(1, 1);
+	ajoutGauche(arbre, 2, 1);
+	ajoutGauche(arbre, 3, 1);
+	ajoutDroite(arbre->m_left, 4, 1);
 
-	ajoutGauche(arbre->m_left, 3);
-	ajoutGauche(arbre->m_right, 6);	
-
-	ajoutDroite(arbre->m_left, 4);
-	ajoutGauche(arbre->m_right->m_left, 7);
-	ajoutDroite(arbre->m_right->m_left, 8);
-	
-	parcoursPostfixe(arbre);
-	printf("\n");
-	parcoursInfixe(arbre);
-	printf("\n");
+	ajoutDroite(arbre, '5', 0);
+	ajoutDroite(arbre, 7, 1);
+	ajoutGauche(arbre->m_right, 6, 1);
+	afficher_Arbre(arbre, 0);	
 	printf("L'arbre est de hauteur : %d\n", hauteur(arbre));
 	printf("L'arbre est de taille : %d\n", taille(arbre));
 	printf("L'arbre a %d feuilles\n", nbFeuilles(arbre));
-
+	libererArbre(&arbre);
 	return;
 }

@@ -1,2 +1,10 @@
 ﻿  arbres.c
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(104): warning C4047: '==': 'void *' differs in levels of indirection from 'int'
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(182): warning C4022: 'creerNoeudArbre': pointer mismatch for actual parameter 1
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(183): warning C4022: 'ajoutGauche': pointer mismatch for actual parameter 2
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(184): warning C4022: 'ajoutGauche': pointer mismatch for actual parameter 2
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(185): warning C4022: 'ajoutDroite': pointer mismatch for actual parameter 2
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(187): warning C4022: 'ajoutDroite': pointer mismatch for actual parameter 2
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(188): warning C4022: 'ajoutDroite': pointer mismatch for actual parameter 2
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(189): warning C4022: 'ajoutGauche': pointer mismatch for actual parameter 2
   ListeChaine.vcxproj -> C:\Users\nicol\source\Programmation\Travail\2A\S1\ListeChaine\Debug\ListeChaine.exe
