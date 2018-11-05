@@ -30,6 +30,9 @@
     <ClCompile Include="arbres.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ABR.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="liste.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="arbres.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ABR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

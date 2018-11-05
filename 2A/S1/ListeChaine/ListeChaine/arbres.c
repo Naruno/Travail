@@ -28,8 +28,8 @@ void libererArbre(treeNode ** p_ppRoot) {
 	if (!(*p_ppRoot)) {
 		return;
 	}
-	libererArbre(&(*p_ppRoot)->m_left);
-	libererArbre(&(*p_ppRoot)->m_right);	
+	libererArbre(&((*p_ppRoot)->m_left));
+	libererArbre(&((*p_ppRoot)->m_right));	
 	free(*p_ppRoot);
 	*p_ppRoot = NULL;
 	return;
@@ -96,9 +96,9 @@ int nbFeuilles(treeNode * p_pRoot) {
 	return a + b;
 }
 
-void supprSousArbre(treeNode ** p_ppRoot, int p_value) {
+void supprSousArbre(treeNode ** p_ppRoot, int p_value) { 
 
-	if (!(*p_ppRoot) || !(*p_ppRoot)->m_left && !(*p_ppRoot)->m_right) {
+	if (!(*p_ppRoot) ) {
 		return;
 	}
 	if ((*p_ppRoot)->m_data == p_value) {
@@ -164,7 +164,7 @@ void parcoursPostfixe(treeNode * p_pRoot) {
 }
 
 void afficher_Arbre(treeNode * p_pRoot, int profondeur) {
-	if (!p_pRoot) {		
+	if (!p_pRoot) {			
 		return;
 	}
 	int i = 0;
@@ -177,6 +177,20 @@ void afficher_Arbre(treeNode * p_pRoot, int profondeur) {
 	afficher_Arbre(p_pRoot->m_left, profondeur + 1);	
 }
 
+void affichage_propre(treeNode * p_pRoot) {
+	int i, profondeur = hauteur(p_pRoot);
+	printf("\n");
+	
+	for (i = 0; i < 4 * (profondeur + 1); i++) {
+		printf("-");
+	}
+	printf("\n");
+	afficher_Arbre(p_pRoot, 0);
+	for (i = 0; i < 4 * (profondeur + 1); i++) {
+		printf("-");
+	}
+	printf("\n");
+}
 void testTree() {
 
 	treeNode * arbre = creerNoeudArbre(1, 1);
@@ -187,10 +201,14 @@ void testTree() {
 	ajoutDroite(arbre, '5', 0);
 	ajoutDroite(arbre, 7, 1);
 	ajoutGauche(arbre->m_right, 6, 1);
-	afficher_Arbre(arbre, 0);	
+	affichage_propre(arbre);
 	printf("L'arbre est de hauteur : %d\n", hauteur(arbre));
 	printf("L'arbre est de taille : %d\n", taille(arbre));
 	printf("L'arbre a %d feuilles\n", nbFeuilles(arbre));
-	libererArbre(&arbre);
+
+	supprSousArbre(&arbre, 1);
+	affichage_propre(arbre);
+
+	libererArbre(&arbre);	
 	return;
 }

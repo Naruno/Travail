@@ -1,10 +1,12 @@
-﻿  arbres.c
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(104): warning C4047: '==': 'void *' differs in levels of indirection from 'int'
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(182): warning C4022: 'creerNoeudArbre': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(183): warning C4022: 'ajoutGauche': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(184): warning C4022: 'ajoutGauche': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(185): warning C4022: 'ajoutDroite': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(187): warning C4022: 'ajoutDroite': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(188): warning C4022: 'ajoutDroite': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\arbres.c(189): warning C4022: 'ajoutGauche': pointer mismatch for actual parameter 2
+﻿  ABR.c
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\abr.c(22): warning C4098: 'ajout': 'void' function returning a value
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\abr.c(56): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'void *'
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\abr.c(59): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'void *'
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\abr.c(92): warning C4022: 'creerNoeudArbre': pointer mismatch for actual parameter 1
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\abr.c(94): warning C4022: 'ajout': pointer mismatch for actual parameter 2
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\abr.c(95): warning C4022: 'ajout': pointer mismatch for actual parameter 2
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\abr.c(96): warning C4022: 'ajout': pointer mismatch for actual parameter 2
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\abr.c(97): warning C4022: 'ajout': pointer mismatch for actual parameter 2
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\abr.c(101): warning C4022: 'suppression': pointer mismatch for actual parameter 2
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\abr.c(18): warning C4715: 'rechercher': not all control paths return a value
   ListeChaine.vcxproj -> C:\Users\nicol\source\Programmation\Travail\2A\S1\ListeChaine\Debug\ListeChaine.exe

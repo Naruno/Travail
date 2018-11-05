@@ -3,10 +3,12 @@
 #include "piles.h"
 #include "application.h"
 #include "arbres.h"
+#include "ABR.h"
 
 int main(){
 	
-	testTree();
+	testRecherche();
+	//testTree();
 	system("pause");
 	return 0;
 }
