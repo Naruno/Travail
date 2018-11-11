@@ -1,7 +1,8 @@
 #pragma once
 #include "arbres.h"
-#include <Windows.h>
+#include "affichage.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 treeNode * creerNoeudArbre(void* p_value, int type) {
 
@@ -12,7 +13,7 @@ treeNode * creerNoeudArbre(void* p_value, int type) {
 		return NULL;
 	}
 	if (type != 0 && type != 1) {
-		printf("Veuillez spécifier le type correctement :\n- 0 : char\n- 1 : int\n");
+		print("Veuillez spécifier le type correctement :\n- 0 : char\n- 1 : int\n");
 		return NULL;
 	}
 	noeud->type = type;	
@@ -38,7 +39,7 @@ void libererArbre(treeNode ** p_ppRoot) {
 void ajoutGauche(treeNode * p_pRoot, void* p_value, int type) {
 
 	if (!p_pRoot) {
-		printf("Le noeud n'existe pas\n");
+		print("Le noeud n'éxiste pas\n");
 		return;
 	}
 	if (p_pRoot->m_left) {
@@ -52,15 +53,14 @@ void ajoutGauche(treeNode * p_pRoot, void* p_value, int type) {
 void ajoutDroite(treeNode * p_pRoot, void* p_value, int type) {
 
 	if (!p_pRoot) {
-		printf("Le noeud n'existe pas\n");
+		print("Le noeud n'éxiste pas\n");
 		return;
 	}
 	if (p_pRoot->m_right) {
 		ajoutDroite(p_pRoot->m_right, p_value, type);
 		return;
 	}
-	p_pRoot->m_right = creerNoeudArbre(p_value, type);
-	
+	p_pRoot->m_right = creerNoeudArbre(p_value, type);	
 }
 
 int hauteur(treeNode * p_pRoot) {
@@ -101,7 +101,7 @@ void supprSousArbre(treeNode ** p_ppRoot, int p_value) {
 	if (!(*p_ppRoot) ) {
 		return;
 	}
-	if ((*p_ppRoot)->m_data == p_value) {
+	if ((int)((*p_ppRoot)->m_data) == p_value) {
 		libererArbre(&(*p_ppRoot));
 		return;
 	}
@@ -177,9 +177,9 @@ void afficher_Arbre(treeNode * p_pRoot, int profondeur) {
 	afficher_Arbre(p_pRoot->m_left, profondeur + 1);	
 }
 
-void affichage_propre(treeNode * p_pRoot) {
+void affichage_propre(char* message, treeNode * p_pRoot) {
 	int i, profondeur = hauteur(p_pRoot);
-	printf("\n");
+	print(message);	
 	
 	for (i = 0; i < 4 * (profondeur + 1); i++) {
 		printf("-");
@@ -191,9 +191,9 @@ void affichage_propre(treeNode * p_pRoot) {
 	}
 	printf("\n");
 }
-void testTree() {
+void test_Arbre() {
 
-	treeNode * arbre = creerNoeudArbre(1, 1);
+	treeNode * arbre = creerNoeudArbre((void *)1, 1);
 	ajoutGauche(arbre, 2, 1);
 	ajoutGauche(arbre, 3, 1);
 	ajoutDroite(arbre->m_left, 4, 1);
@@ -201,13 +201,13 @@ void testTree() {
 	ajoutDroite(arbre, '5', 0);
 	ajoutDroite(arbre, 7, 1);
 	ajoutGauche(arbre->m_right, 6, 1);
-	affichage_propre(arbre);
+	affichage_propre("arbre\n", arbre);
 	printf("L'arbre est de hauteur : %d\n", hauteur(arbre));
 	printf("L'arbre est de taille : %d\n", taille(arbre));
 	printf("L'arbre a %d feuilles\n", nbFeuilles(arbre));
 
 	supprSousArbre(&arbre, 1);
-	affichage_propre(arbre);
+	affichage_propre("arbre après supression\n", arbre);
 
 	libererArbre(&arbre);	
 	return;

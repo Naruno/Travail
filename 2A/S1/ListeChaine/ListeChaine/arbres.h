@@ -26,11 +26,11 @@ void supprSousArbre(treeNode ** p_ppRoot, int p_value);
 
 void afficher_noeud(treeNode * p_pRoot);
 void afficher_Arbre(treeNode * p_pRoot, int profondeur);
-void affichage_propre(treeNode * p_pRoot);
+void affichage_propre(char* message, treeNode * p_pRoot);
 
 void parcoursPrefixe(treeNode * p_pRoot);
 void parcoursInfixe(treeNode * p_pRoot);
 void parcoursPostfixe(treeNode * p_pRoot);
 
-void testTree();
+void test_Arbre();
 #endif

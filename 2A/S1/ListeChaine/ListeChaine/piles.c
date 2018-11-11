@@ -1,6 +1,9 @@
 #pragma once
-#include "piles.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include "affichage.h"
+#include "piles.h"
+
 void push(node** p_head, node* p_new) {
 
 	if (!(p_head) || !p_new) {
@@ -13,7 +16,7 @@ void push(node** p_head, node* p_new) {
 node* pop_stack(node** p_head) {
 	
 	if (!p_head) {
-		return;
+		return NULL;;
 	}
 	node* tmp = *p_head;	
 	*p_head = (*p_head)->m_next;
@@ -32,31 +35,31 @@ void free_stack(node** p_head) {
 	return;
 }
 
-void test_stack() {
+void test_Pile() {
 
-	node* maListe = createListNode(1);
-	node* new = createListNode(0);
+	node* maListe = createListNode(1, 1);
+	node* new = createListNode(0, 1);
 
-	printf("On creer la pile : ");
-	printList_int(maListe);
+	print("On créer la pile : ");
+	printList(maListe);
 
-	printf("On ajoute un element : ");
+	print("On ajoute un élement : ");
 	push(&maListe, new);
-	printList_int(maListe);
+	printList(maListe);
 
-	printf("On enleve un element : ");
+	print("On enlève un élement : ");
 	node* suppr = pop_stack(&maListe);	
-	printList_int(maListe);
+	printList(maListe);
 
-	printf("On enleve un element : ");
+	print("On enlève un élement : ");
 	suppr = pop_stack(&maListe);
-	printList_int(maListe);
+	printList(maListe);
 
-	printf("On ajoute un element : ");
+	print("On ajoute un élement : ");
 	push(&maListe, new);
-	printList_int(maListe);
+	printList(maListe);
 
 	printf("On libere la pile : ");
 	free_stack(&maListe);
-	printList_int(maListe);
+	printList(maListe);
 }

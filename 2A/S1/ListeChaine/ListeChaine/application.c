@@ -1,6 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
@@ -11,7 +10,7 @@
 int calculatrice_polonaise(char* p_calcul) {
 
 	int taille = strlen(p_calcul), i = 0, nombre = 0, construction = 0;
-	node* pile = createListNode(0);
+	node* pile = createListNode(0, 1);
 	node *new, *dernier, *avant_dernier;
 	pop_stack(&pile);
 	
@@ -23,7 +22,7 @@ int calculatrice_polonaise(char* p_calcul) {
 			continue;
 		}
 		if (p_calcul[i] == ' ' && construction) {		
-			push(&pile, createListNode(nombre));
+			push(&pile, createListNode(nombre, 1));
 			
 			nombre = 0;
 			construction = 0;
@@ -34,28 +33,28 @@ int calculatrice_polonaise(char* p_calcul) {
 		case '+':	
 			dernier = pop_stack(&pile);
 			avant_dernier = pop_stack(&pile);
-			new = createListNode((int)avant_dernier->m_data + (int)dernier->m_data);				
+			new = createListNode((int)avant_dernier->m_data + (int)dernier->m_data, 1);				
 			push(&pile, new);					
 			break;
 		
 		case '-':
 			dernier = pop_stack(&pile);
 			avant_dernier = pop_stack(&pile);
-			new = createListNode((int)avant_dernier->m_data - (int)dernier->m_data);			
+			new = createListNode((int)avant_dernier->m_data - (int)dernier->m_data, 1);			
 			push(&pile, new);			
 			break;
 
 		case 'x':
 			dernier = pop_stack(&pile);
 			avant_dernier = pop_stack(&pile);
-			new = createListNode((int)avant_dernier->m_data * (int)dernier->m_data);		
+			new = createListNode((int)avant_dernier->m_data * (int)dernier->m_data, 1);
 			push(&pile, new);					
 			break;
 
 		case '/':
 			dernier = pop_stack(&pile);
 			avant_dernier = pop_stack(&pile);
-			new = createListNode((int)avant_dernier->m_data / (int)dernier->m_data);		
+			new = createListNode((int)avant_dernier->m_data / (int)dernier->m_data, 1);		
 			push(&pile, new);						
 			break;
 
@@ -66,7 +65,7 @@ int calculatrice_polonaise(char* p_calcul) {
 	return pile->m_data;
 }
 
-void Test_Calculatrice() {
+void test_Calculatrice() {
 	char* calcul = "4 5 + 3 10 5 / - x";
 	int resultat = calculatrice_polonaise(calcul);
 
@@ -74,8 +73,8 @@ void Test_Calculatrice() {
 }
 
 int calculatrice_infixe() {
-	node* pile_operandes = createListNode(0);
-	node* pile_operateurs = createListNode('+');
+	node* pile_operandes = createListNode(0, 1);
+	node* pile_operateurs = createListNode('+', 0);
 	node *dernier, *avant_dernier;
 	char calcul[255], operateur = 'a';
 	int taille = 0, i = 0, nombre = 0, construction = 0;
@@ -129,7 +128,7 @@ int calculatrice_infixe() {
 			continue;
 		}
 		if (calcul[i] == ' ' && construction) {			
-			push(&pile_operandes, createListNode(nombre));
+			push(&pile_operandes, createListNode(nombre, 1));
 
 			nombre = 0;
 			construction = 0;
@@ -138,19 +137,19 @@ int calculatrice_infixe() {
 		switch (calcul[i]) {
 
 		case '+':
-			push(&pile_operateurs, createListNode('+'));			
+			push(&pile_operateurs, createListNode('+', 0));			
 			break;
 
 		case '-':
-			push(&pile_operateurs, createListNode('-'));
+			push(&pile_operateurs, createListNode('-', 0));
 			break;
 
 		case 'x':
-			push(&pile_operateurs, createListNode('x'));
+			push(&pile_operateurs, createListNode('x', 0));
 			break;
 
 		case '/':
-			push(&pile_operateurs, createListNode('/'));
+			push(&pile_operateurs, createListNode('/', 0));
 			break;
 
 		default:
@@ -165,19 +164,19 @@ int calculatrice_infixe() {
 			{
 
 			case '+':
-				push(&pile_operandes, createListNode((int)avant_dernier->m_data + (int)dernier->m_data));
+				push(&pile_operandes, createListNode((int)avant_dernier->m_data + (int)dernier->m_data, 1));
 				break;
 
 			case '-':
-				push(&pile_operandes, createListNode((int)avant_dernier->m_data - (int)dernier->m_data));
+				push(&pile_operandes, createListNode((int)avant_dernier->m_data - (int)dernier->m_data, 1));
 				break;
 
 			case 'x':
-				push(&pile_operandes, createListNode((int)avant_dernier->m_data * (int)dernier->m_data));
+				push(&pile_operandes, createListNode((int)avant_dernier->m_data * (int)dernier->m_data, 1));
 				break;
 
 			case '/':
-				push(&pile_operandes, createListNode((int)avant_dernier->m_data / (int)dernier->m_data));
+				push(&pile_operandes, createListNode((int)avant_dernier->m_data / (int)dernier->m_data, 1));
 				break;
 			default:
 				break;

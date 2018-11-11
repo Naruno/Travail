@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ABR.c" />
+    <ClCompile Include="affichage.c" />
     <ClCompile Include="application.c" />
     <ClCompile Include="arbres.c" />
     <ClCompile Include="liste.c" />
@@ -124,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ABR.h" />
+    <ClInclude Include="affichage.h" />
     <ClInclude Include="application.h" />
     <ClInclude Include="arbres.h" />
     <ClInclude Include="liste.h" />
