@@ -11,7 +11,7 @@ struct sTreeNode
 	treeNode * m_left; 
 	treeNode * m_right;
 };
-
+//0 - char   1 - int
 treeNode * creerNoeudArbre(void* p_value, int type);
 void libererArbre(treeNode ** p_ppRoot);
 

@@ -36,6 +36,9 @@
     <ClCompile Include="affichage.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AVL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="liste.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="affichage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AVL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

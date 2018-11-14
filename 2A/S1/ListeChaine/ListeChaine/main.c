@@ -7,6 +7,7 @@
 #include "application.h"
 #include "arbres.h"
 #include "ABR.h"
+#include "AVL.h"
 
 int main(){
 	//test_Calculatrice();	
@@ -14,8 +15,8 @@ int main(){
 	//test_Liste();
 	//test_Pile();	
 	//test_Arbre();
-	test_ABR();
-
+	//test_ABR();
+	test_AVL();
 	system("pause");
 	return 0;
 }

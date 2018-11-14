@@ -163,13 +163,13 @@ treeNode* arboriser(treeNode* p_Root) {
 void test_ABR() {
 
 	treeNode * arbre = creerNoeudArbre((int*)20, 1);	
-	ajout(arbre, 5, 1);
-	ajout(arbre, 10, 1);
-	ajout(arbre, 15, 1);
-	ajout(arbre, 25, 1);	
-	ajout(arbre, 30, 1);	
-	ajout(arbre, 35, 1);	
-	ajout(arbre, 40, 1);		
+	ajout(arbre, (int*)5, 1);
+	ajout(arbre, (int*)10, 1);
+	ajout(arbre, (int*)15, 1);
+	ajout(arbre, (int*)25, 1);	
+	ajout(arbre, (int*)30, 1);	
+	ajout(arbre, (int*)35, 1);	
+	ajout(arbre, (int*)40, 1);		
 	affichage_propre("arbre\n", arbre);	
 	suppression(&arbre, (int*)6);
 	affichage_propre("arbre après suppression\n", arbre);

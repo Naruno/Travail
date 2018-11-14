@@ -119,6 +119,7 @@
     <ClCompile Include="affichage.c" />
     <ClCompile Include="application.c" />
     <ClCompile Include="arbres.c" />
+    <ClCompile Include="AVL.c" />
     <ClCompile Include="liste.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="piles.c" />
@@ -128,6 +129,7 @@
     <ClInclude Include="affichage.h" />
     <ClInclude Include="application.h" />
     <ClInclude Include="arbres.h" />
+    <ClInclude Include="AVL.h" />
     <ClInclude Include="liste.h" />
     <ClInclude Include="piles.h" />
   </ItemGroup>

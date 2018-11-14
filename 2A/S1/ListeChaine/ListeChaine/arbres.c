@@ -3,9 +3,9 @@
 #include "affichage.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+//0 - char   1 - int.
 treeNode * creerNoeudArbre(void* p_value, int type) {
-
+	
 	treeNode* noeud = (treeNode*)calloc(1, sizeof(*noeud));
 
 	if (!noeud) {
