@@ -1,12 +1,3 @@
-﻿  AVL.c
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\avl.c(41): warning C4022: 'creerNoeudArbre': pointer mismatch for actual parameter 1
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\avl.c(42): warning C4022: 'ajout': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\avl.c(43): warning C4022: 'ajout': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\avl.c(44): warning C4022: 'ajout': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\avl.c(45): warning C4022: 'ajout': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\avl.c(46): warning C4022: 'ajout': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\avl.c(47): warning C4022: 'ajout': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\avl.c(48): warning C4022: 'ajout': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\avl.c(49): warning C4022: 'ajout': pointer mismatch for actual parameter 2
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\avl.c(50): warning C4022: 'ajout': pointer mismatch for actual parameter 2
+﻿  morce.c
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(88): warning C4047: '==': 'int' differs in levels of indirection from 'void *'
   ListeChaine.vcxproj -> C:\Users\nicol\source\Programmation\Travail\2A\S1\ListeChaine\Debug\ListeChaine.exe

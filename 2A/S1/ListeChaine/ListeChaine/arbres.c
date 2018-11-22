@@ -3,8 +3,8 @@
 #include "affichage.h"
 #include <stdio.h>
 #include <stdlib.h>
-//0 - char   1 - int.
-treeNode * creerNoeudArbre(void* p_value, int type) {
+//0 - char-!avl   1 - int-avl
+treeNode * creerNoeudArbre(void* p_value, char type, char avl) {
 	
 	treeNode* noeud = (treeNode*)calloc(1, sizeof(*noeud));
 
@@ -16,6 +16,7 @@ treeNode * creerNoeudArbre(void* p_value, int type) {
 		print("Veuillez spécifier le type correctement :\n- 0 : char\n- 1 : int\n");
 		return NULL;
 	}
+	noeud->avl = avl;
 	noeud->type = type;	
 	noeud->m_data = p_value;	
 	noeud->m_left = NULL;
@@ -36,7 +37,7 @@ void libererArbre(treeNode ** p_ppRoot) {
 	return;
 }
 
-void ajoutGauche(treeNode * p_pRoot, void* p_value, int type) {
+void ajoutGauche(treeNode * p_pRoot, void* p_value, char type) {
 
 	if (!p_pRoot) {
 		print("Le noeud n'éxiste pas\n");
@@ -46,11 +47,11 @@ void ajoutGauche(treeNode * p_pRoot, void* p_value, int type) {
 		ajoutGauche(p_pRoot->m_left, p_value, type);
 		return;
 	}
-	p_pRoot->m_left = creerNoeudArbre(p_value, type);
+	p_pRoot->m_left = creerNoeudArbre(p_value, type, p_pRoot->avl);
 
 }
 
-void ajoutDroite(treeNode * p_pRoot, void* p_value, int type) {
+void ajoutDroite(treeNode * p_pRoot, void* p_value, char type) {
 
 	if (!p_pRoot) {
 		print("Le noeud n'éxiste pas\n");
@@ -60,7 +61,7 @@ void ajoutDroite(treeNode * p_pRoot, void* p_value, int type) {
 		ajoutDroite(p_pRoot->m_right, p_value, type);
 		return;
 	}
-	p_pRoot->m_right = creerNoeudArbre(p_value, type);	
+	p_pRoot->m_right = creerNoeudArbre(p_value, type, p_pRoot->avl);	
 }
 
 int hauteur(treeNode * p_pRoot) {
@@ -193,7 +194,7 @@ void affichage_propre(char* message, treeNode * p_pRoot) {
 }
 void test_Arbre() {
 
-	treeNode * arbre = creerNoeudArbre((void *)1, 1);
+	treeNode * arbre = creerNoeudArbre((void *)1, 1, 0);
 	ajoutGauche(arbre, 2, 1);
 	ajoutGauche(arbre, 3, 1);
 	ajoutDroite(arbre->m_left, 4, 1);

@@ -7,16 +7,17 @@ typedef struct sTreeNode treeNode;
 struct sTreeNode
 {
 	void* m_data;
-	int type;
+	char type;
+	char avl;
 	treeNode * m_left; 
 	treeNode * m_right;
 };
 //0 - char   1 - int
-treeNode * creerNoeudArbre(void* p_value, int type);
+treeNode * creerNoeudArbre(void* p_value, char type, char avl);
 void libererArbre(treeNode ** p_ppRoot);
 
-void ajoutGauche(treeNode * p_pRoot, void* p_value, int type);
-void ajoutDroite(treeNode * p_pRoot, void* p_value, int type);
+void ajoutGauche(treeNode * p_pRoot, void* p_value, char type);
+void ajoutDroite(treeNode * p_pRoot, void* p_value, char type);
 
 int hauteur(treeNode * p_pRoot);
 int taille(treeNode * p_pRoot);

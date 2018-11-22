@@ -122,6 +122,7 @@
     <ClCompile Include="AVL.c" />
     <ClCompile Include="liste.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="morce.c" />
     <ClCompile Include="piles.c" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +132,7 @@
     <ClInclude Include="arbres.h" />
     <ClInclude Include="AVL.h" />
     <ClInclude Include="liste.h" />
+    <ClInclude Include="morse.h" />
     <ClInclude Include="piles.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

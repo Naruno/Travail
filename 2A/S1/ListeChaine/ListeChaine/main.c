@@ -8,6 +8,7 @@
 #include "arbres.h"
 #include "ABR.h"
 #include "AVL.h"
+#include "morse.h"
 
 int main(){
 	//test_Calculatrice();	
@@ -16,7 +17,8 @@ int main(){
 	//test_Pile();	
 	//test_Arbre();
 	//test_ABR();
-	test_AVL();
+	//test_AVL();
+	test_Morse();
 	system("pause");
 	return 0;
 }

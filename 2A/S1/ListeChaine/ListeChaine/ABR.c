@@ -1,4 +1,5 @@
 #include "ABR.h"
+#include "AVL.h"
 
 #include <stdio.h>
 
@@ -19,38 +20,42 @@ treeNode ** rechercher(treeNode ** p_pRoot, void* p_value) {
 	return NULL;
 }
 
-void ajout(treeNode * p_pRoot, void* p_value, int type) {
-	if (!p_pRoot) {
+void ajout(treeNode ** p_pRoot, void* p_value, char type) {
+	if (!(*p_pRoot)) {
 		return;
 	}
-	if (!p_pRoot->m_left && !p_pRoot->m_right) {
-		if (p_value >= p_pRoot->m_data) {
-			p_pRoot->m_right = creerNoeudArbre(p_value, type);
+	if (!(*p_pRoot)->m_left && !(*p_pRoot)->m_right) {
+		if (p_value >= (*p_pRoot)->m_data) {
+			(*p_pRoot)->m_right = creerNoeudArbre(p_value, type, (*p_pRoot)->avl);
 			return;
 		}
-		if (p_value < p_pRoot->m_data) {
-			p_pRoot->m_left = creerNoeudArbre(p_value, type);
+		if (p_value < (*p_pRoot)->m_data) {
+			(*p_pRoot)->m_left = creerNoeudArbre(p_value, type, (*p_pRoot)->avl);
 			return;
 		}
 	}
-	if (p_value >= p_pRoot->m_data) {
+	if (p_value >= (*p_pRoot)->m_data) {
 
-		if (p_pRoot->m_right) {
-			ajout(p_pRoot->m_right, p_value, type);			
+		if ((*p_pRoot)->m_right) {
+			ajout(&((*p_pRoot)->m_right), p_value, type);
 		}
 		else {
-			p_pRoot->m_right = creerNoeudArbre(p_value, type);
+			(*p_pRoot)->m_right = creerNoeudArbre(p_value, type, (*p_pRoot)->avl);
 			return;
 		}
+		equilibrer_noeud(p_pRoot);
+		//affichage_propre("noeud après équilibrage\n", *p_pRoot);
 	}
-	if (p_value < p_pRoot->m_data) {
-		if (p_pRoot->m_left) {
-			ajout(p_pRoot->m_left, p_value, type);
+	if (p_value < (*p_pRoot)->m_data) {
+		if ((*p_pRoot)->m_left) {
+			ajout(&((*p_pRoot)->m_left), p_value, type);
 		}
 		else {
-			p_pRoot->m_left = creerNoeudArbre(p_value, type);
+			(*p_pRoot)->m_left = creerNoeudArbre(p_value, type, (*p_pRoot)->avl);
 			return;
 		}
+		equilibrer_noeud(p_pRoot);
+		//affichage_propre("noeud après équilibrage\n", *p_pRoot);
 	}	
 }
 
@@ -79,16 +84,19 @@ void suppression(treeNode ** p_pRoot, void* p_value) {
 	if (!((*noeud)->m_left) && !((*noeud)->m_right)) {
 		// On supprime la feuille.
 		libererArbre(noeud);
+		equilibrer_noeud(p_pRoot);
 		return;
 	}
 	if (!((*noeud)->m_left) && (*noeud)->m_right) {	
 		// On transforme le noeud en son fils.		
 		*noeud = (*noeud)->m_right;		
+		equilibrer_noeud(p_pRoot);
 		return ;
 	}
 	if(((*noeud)->m_left) && !(*noeud)->m_right) {
 		// On transforme le noeud en son fils.
 		*noeud = (*noeud)->m_left;
+		equilibrer_noeud(p_pRoot);
 		return ;
 	}
 	treeNode ** predecesseur = &((*noeud)->m_left);
@@ -99,6 +107,7 @@ void suppression(treeNode ** p_pRoot, void* p_value) {
 	}
 	(*noeud)->m_data = tempo->m_data;		
 	suppression(&(*predecesseur), tempo->m_data);
+	equilibrer_noeud(p_pRoot);
 	return;
 }
 
@@ -137,7 +146,7 @@ treeNode* arboriser(treeNode* p_Root) {
 		p_left_tmp = NULL;
 	}
 	else {
-		p_left = creerNoeudArbre(p_Root->m_data, p_Root->type);
+		p_left = creerNoeudArbre(p_Root->m_data, p_Root->type, p_Root->avl);
 		p_left_tmp = p_Root->m_right;
 	}
 	treeNode* p_right = p_Root;
@@ -149,7 +158,7 @@ treeNode* arboriser(treeNode* p_Root) {
 	
 	if (p_left_tmp && p_left_tmp->m_right){
 		while (p_left_tmp->m_data != p_racine->m_data) {
-			ajout(p_left, p_left_tmp->m_data, p_left_tmp->type);
+			ajout(&p_left, p_left_tmp->m_data, p_left_tmp->type);
 			p_left_tmp = p_left_tmp->m_right;
 		}
 	}	
@@ -162,16 +171,16 @@ treeNode* arboriser(treeNode* p_Root) {
 
 void test_ABR() {
 
-	treeNode * arbre = creerNoeudArbre((int*)20, 1);	
-	ajout(arbre, (int*)5, 1);
-	ajout(arbre, (int*)10, 1);
-	ajout(arbre, (int*)15, 1);
-	ajout(arbre, (int*)25, 1);	
-	ajout(arbre, (int*)30, 1);	
-	ajout(arbre, (int*)35, 1);	
-	ajout(arbre, (int*)40, 1);		
+	treeNode * arbre = creerNoeudArbre((char*)20, 1, 0);	
+	ajout(&arbre, (char*)5, 1);
+	ajout(&arbre, (char*)10, 1);
+	ajout(&arbre, (char*)15, 1);
+	ajout(&arbre, (char*)25, 1);	
+	ajout(&arbre, (char*)30, 1);	
+	ajout(&arbre, (char*)35, 1);	
+	ajout(&arbre, (char*)40, 1);		
 	affichage_propre("arbre\n", arbre);	
-	suppression(&arbre, (int*)6);
+	suppression(&arbre, (char*)6);
 	affichage_propre("arbre après suppression\n", arbre);
 	treeNode * liste = NULL;
 	treeNode * arbre_lineaire = lineariser(arbre, liste);

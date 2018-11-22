@@ -39,6 +39,9 @@
     <ClCompile Include="AVL.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="morce.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="liste.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AVL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="morse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

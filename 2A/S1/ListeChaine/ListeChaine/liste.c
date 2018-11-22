@@ -99,8 +99,7 @@ void printList(node* p_pRoot) {
 	if (p_pRoot->type == 0) {
 		printf("%c -> ", (char*)p_pRoot->m_data);
 		printList(p_pRoot->m_next);
-	}
-	
+	}	
 }
 
 node* addSortAsc(node* p_node, void* p_value, int type) {
