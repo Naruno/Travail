@@ -1,3 +1,12 @@
 ﻿  morce.c
-c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(88): warning C4047: '==': 'int' differs in levels of indirection from 'void *'
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(92): warning C4047: '==': 'int' differs in levels of indirection from 'void *'
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(271): warning C4033: 'convertisseur_morse_clair' must return a value
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(295): warning C4047: '!=': 'char [1032]' differs in levels of indirection from 'int'
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(317): warning C4033: 'convertisseur_clair_morse' must return a value
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(339): warning C4018: '<': signed/unsigned mismatch
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(238): warning C4715: 'morse_lettre': not all control paths return a value
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(305): warning C4715: 'convertisseur_morse_clair': not all control paths return a value
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(347): warning C4715: 'convertisseur_clair_morse': not all control paths return a value
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(304): warning C4172: returning address of local variable or temporary: message
+c:\users\nicol\source\programmation\travail\2a\s1\listechaine\listechaine\morce.c(346): warning C4172: returning address of local variable or temporary: message
   ListeChaine.vcxproj -> C:\Users\nicol\source\Programmation\Travail\2A\S1\ListeChaine\Debug\ListeChaine.exe

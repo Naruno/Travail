@@ -28,4 +28,10 @@ void ajout_m(noeud_morse ** p_pRoot, char* morse, char lettre);
 pile_morse* pop_m(pile_morse* p_pRoot, pile_morse * save);
 pile_morse * charger_liste();
 noeud_morse * chargerMorse_Vide(noeud_morse * noeud, int profondeur);
+char morse_lettre(noeud_morse * noeud, char * morse);
+char * lettre_morse(char lettre);
+noeud_morse * chargerMorse_plein();
+
+char * convertisseur_morse_clair(char* path);
+char * convertisseur_clair_morse(char* path);
 void test_Morse();

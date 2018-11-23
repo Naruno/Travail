@@ -1,8 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "morse.h"
 #include "affichage.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
+#define CLAIR "C:\\Users\\nicol\\source\\Programmation\\Travail\\2A\\S1\\ListeChaine\\Debug\\Morse.txt"
+#define MORSE "C:\\Users\\nicol\\source\\Programmation\\Travail\\2A\\S1\\ListeChaine\\Debug\\Clair.txt"
 
 noeud_morse * creerNoeud_Morse(char lettre) {
 
@@ -30,6 +34,8 @@ void libererMorse(noeud_morse ** p_ppRoot) {
 	*p_ppRoot = NULL;
 	return;
 }
+
+
 
 int hauteur_m(noeud_morse * p_pRoot) {
 
@@ -79,29 +85,22 @@ void affichage_propre_m(char* message, noeud_morse * p_pRoot) {
 }
 
 void ajout_m(noeud_morse ** p_pRoot, char* morse, char lettre) {
-	printf("DEBUT\n");
-	printf("\"%c\"\n", morse[0]);
-	if (!(*p_pRoot)) {
-		printf("MORT\n");
+	
+	if (!(*p_pRoot)) {		
 		return;
 	}
-	if (morse[0] == NULL) {
-		printf("OK!\n");
+	if (morse[0] == NULL) {	
 		(*p_pRoot)->lettre = lettre;
 		return;
 	}
-	if (morse[0] == '.') {
-		printf("GAUCHE\n");
+	if (morse[0] == '.') {	
 		ajout_m(&((*p_pRoot)->m_gauche), morse + 1, lettre);
 		
 	}
-	if (morse[0] == '-') {
-		printf("DROITE\n");
+	if (morse[0] == '-') {		
 		ajout_m(&((*p_pRoot)->m_droit), morse + 1, lettre);
 		
-	}
-	printf("FIN\n");
-	
+	}	
 }
 pile_morse* pop_stack_m(pile_morse** p_head) {
 
@@ -225,26 +224,141 @@ noeud_morse * chargerMorse_Vide(noeud_morse * noeud, int profondeur) {
 	return noeud;
 }
 
-void test_Morse() {
+char morse_lettre(noeud_morse * noeud, char * morse) {
 
-	noeud_morse * morse = creerNoeud_Morse(' ');	
+	if (!(morse[0])) {
+		return noeud->lettre;
+	}
+	if (morse[0] == '.') {
+		morse_lettre(noeud->m_gauche, morse + 1);
+	}
+	else {
+		morse_lettre(noeud->m_droit, morse + 1);
+	}
+}
+
+char * lettre_morse(char lettre) {
+	pile_morse * pile = charger_liste();
+	while (pile->lettre != lettre) {
+		pile = pile->m_next;
+	}
+	return pile->morse;
+}
+
+noeud_morse * chargerMorse_plein() {
+	noeud_morse * morse = creerNoeud_Morse(' ');
 	pile_morse * pile = charger_liste();
 	pile_morse * supprime = createPile_Morse(" ", ' ');
 	morse = chargerMorse_Vide(morse, 5);
-
 	while (pile) {
 		pile = pop_m(pile, supprime);
 		ajout_m(&morse, supprime->morse, supprime->lettre);
 	}
+	return morse;
+}
+
+char* convertisseur_morse_clair(char* path) {
+	FILE* file = NULL;
+	noeud_morse * morse = chargerMorse_plein();
+	char message[1032] = "";
+	char texte_clair[144][1032];
+	char texte_morse[1032] = "";	
+	int ctr = 0, j = 0, i;
+	int taille;
+	file = fopen(path, "r");
+	if (!file) {
+		printf("Erreur lors de l\'ouverture du fichier.\n");
+		return;
+	}	
+	fseek(file, 0, SEEK_END);
+	taille = ftell(file);
+	fseek(file, 0, SEEK_SET);
+	fread(texte_morse, taille, 1, file);
+	fclose(file);
+	printf("Morse : %s\n", texte_morse);
 	
-	//printPile_m(pile);	
-	//printPile_m(supprime);
-	
-	
-	
-	
-	affichage_propre_m("arbre de test\n", morse);
-	
-	
+	taille = strlen(texte_morse);	
+	for (i = 0; i <= taille; i++){
+		// if space or NULL found, assign NULL into newString[ctr]
+		if (texte_morse[i] == ' ' || texte_morse[i] == '\0'){
+			texte_clair[ctr][j] = '\0';
+			ctr++;  //for next word
+			j = 0;    //for next word, init index to 0
+		}
+		else{
+			texte_clair[ctr][j] = texte_morse[i];
+			j++;
+		}
+	}
+	for (i = 0; i < ctr; i++) {
+		//printf("\"%s\"\n", texte_clair[i]);
+		if (texte_clair[i] != ' ') {
+			message[strlen(message)] = morse_lettre(morse,texte_clair[i]);
+		}
+		else {
+			message[strlen(message)] = ' ';
+		}		
+	}
+	printf("clair : %s\n", message);
+	libererMorse(&morse);
+	return message;
+}
+
+char * convertisseur_clair_morse(char* path) {
+	FILE* file = NULL;	
+	char message[1032] = "";
+	char texte_clair[144][1032];
+	char texte_morse[1032] = "";
+	int ctr = 0, j = 0, i;
+	int taille;
+	file = fopen(path, "r");
+	if (!file) {
+		printf("Erreur lors de l\'ouverture du fichier.\n");
+		return;
+	}
+	fseek(file, 0, SEEK_END);
+	taille = ftell(file);
+	fseek(file, 0, SEEK_SET);
+	fread(texte_morse, taille, 1, file);
+	fclose(file);
+	printf("clair : %s\n", texte_morse);
+	taille = strlen(texte_morse);	
+	for (i = 0; i <= taille; i++) {
+		// if space or NULL found, assign NULL into newString[ctr]
+		if (texte_morse[i] == ' ' || texte_morse[i] == '\0') {
+			texte_clair[ctr][j] = '\0';
+			ctr++;  //for next word
+			j = 0;    //for next word, init index to 0
+		}
+		else {
+			texte_clair[ctr][j] = toupper(texte_morse[i]);
+			j++;
+		}
+	}	
+	for (i = 0; i < ctr; i++) {		
+		for (j = 0; j < strlen(texte_clair[i]); j++) {			
+			strcat(message, lettre_morse(texte_clair[i][j]));
+			message[strlen(message)] = ' ';
+		}		
+		message[strlen(message)] = ' ';		
+	}
+	printf("morse : %s\n", message);
+	return message;
+}
+
+void test_Morse() {
+	int choix;
+	printf("0 : Morse -> Clair\n1 : Clair -> Morse\n");
+	scanf("%d", &choix);
+	if (choix != 0 && choix != 1) {
+		printf("Entrez 0 ou 1");
+		return;
+	}
+	if (!choix) {
+		char* texte_clair = convertisseur_morse_clair(CLAIR);
+	}
+	else {
+		char* texte_morse = convertisseur_clair_morse(MORSE);
+	}
 	return;
 }
