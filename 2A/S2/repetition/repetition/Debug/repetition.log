@@ -1,2 +1,9 @@
-﻿  main.c
+﻿  codage.c
+c:\users\nicol\source\programmation\travail\2a\s2\repetition\repetition\codage.c(10): warning C4566: character represented by universal-character-name '\u263A' cannot be represented in the current code page (1252)
+c:\users\nicol\source\programmation\travail\2a\s2\repetition\repetition\codage.c(28): warning C4566: character represented by universal-character-name '\u263A' cannot be represented in the current code page (1252)
+c:\users\nicol\source\programmation\travail\2a\s2\repetition\repetition\codage.c(61): warning C4566: character represented by universal-character-name '\u263A' cannot be represented in the current code page (1252)
+c:\users\nicol\source\programmation\travail\2a\s2\repetition\repetition\codage.c(84): warning C4566: character represented by universal-character-name '\u263A' cannot be represented in the current code page (1252)
+c:\users\nicol\source\programmation\travail\2a\s2\repetition\repetition\codage.c(140): warning C4566: character represented by universal-character-name '\u263A' cannot be represented in the current code page (1252)
+c:\users\nicol\source\programmation\travail\2a\s2\repetition\repetition\codage.c(142): warning C4566: character represented by universal-character-name '\u263A' cannot be represented in the current code page (1252)
+c:\users\nicol\source\programmation\travail\2a\s2\repetition\repetition\codage.c(145): warning C4566: character represented by universal-character-name '\u263A' cannot be represented in the current code page (1252)
   repetition.vcxproj -> C:\Users\nicol\source\Programmation\Travail\2A\S2\repetition\Debug\repetition.exe

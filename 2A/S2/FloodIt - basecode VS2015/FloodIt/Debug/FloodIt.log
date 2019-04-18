@@ -1,0 +1,7 @@
+﻿  aStar.c
+c:\users\nicol\source\programmation\travail\2a\s2\floodit - basecode vs2015\floodit\astar.c(109): warning C4029: declared formal parameter list different from definition
+  game.c
+  gameSDL.c
+c:\users\nicol\source\programmation\travail\2a\s2\floodit - basecode vs2015\floodit\gamesdl.c(82): warning C4244: 'function': conversion from 'float' to 'const Uint8', possible loss of data
+  Generating Code...
+  FloodIt.vcxproj -> C:\Users\nicol\source\Programmation\Travail\2A\S2\FloodIt - basecode VS2015\bin\FloodIt_d.exe

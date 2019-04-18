@@ -1,0 +1,7 @@
+﻿  main.c
+  utils_SDL.c
+  Generating Code...
+c:\users\nicol\source\programmation\travail\2a\s2\dijkstra\dijkstra\utils_sdl.c(95): warning C4716: 'update': must return a value
+MSVCRTD.lib(initializers.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+SDLmain.lib(SDL_win32_main.obj) : warning LNK4099: PDB 'SDLmain.pdb' was not found with 'SDLmain.lib(SDL_win32_main.obj)' or at 'C:\Users\nicol\source\Programmation\Travail\2A\S2\Dijkstra\bin\SDLmain.pdb'; linking object as if no debug info
+  Dijkstra.vcxproj -> C:\Users\nicol\source\Programmation\Travail\2A\S2\Dijkstra\bin\Dijkstra_d.exe

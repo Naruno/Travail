@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="moore\graphe.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moore\grapheSDL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moore\MachineDeMoore.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="moore\graphe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="moore\grapheSDL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="moore\tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\begin_code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\close_code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_active.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_byteorder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_cdrom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_config_dreamcast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_config_macos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_config_macosx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_config_minimal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_config_nds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_config_os2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_config_symbian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_config_win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_copying.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_cpuinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_events.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_framerate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_getenv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_gfxBlitFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_gfxPrimitives.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_gfxPrimitives_font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_imageFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_joystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_keysym.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_loadso.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_mutex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_name.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_opengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_quit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_rotozoom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_rwops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_stdinc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_syswm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-1.2.15\include\SDL_video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-gfx\include\sdlgfx\SDL_framerate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-gfx\include\sdlgfx\SDL_gfxPrimitives.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-gfx\include\sdlgfx\SDL_gfxPrimitives_font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-gfx\include\sdlgfx\SDL_imageFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-gfx\include\sdlgfx\SDL_rotozoom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-gfx\include\sdl_gfx\SDL_framerate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-gfx\include\sdl_gfx\SDL_gfxBlitFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-gfx\include\sdl_gfx\SDL_gfxPrimitives.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-gfx\include\sdl_gfx\SDL_gfxPrimitives_font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-gfx\include\sdl_gfx\SDL_imageFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl-gfx\include\sdl_gfx\SDL_rotozoom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sdl-1.2.15\docs\index.html" />
+    <None Include="sdl-1.2.15\docs\html\audio.html" />
+    <None Include="sdl-1.2.15\docs\html\cdrom.html" />
+    <None Include="sdl-1.2.15\docs\html\event.html" />
+    <None Include="sdl-1.2.15\docs\html\eventfunctions.html" />
+    <None Include="sdl-1.2.15\docs\html\eventstructures.html" />
+    <None Include="sdl-1.2.15\docs\html\general.html" />
+    <None Include="sdl-1.2.15\docs\html\guide.html" />
+    <None Include="sdl-1.2.15\docs\html\guideaboutsdldoc.html" />
+    <None Include="sdl-1.2.15\docs\html\guideaudioexamples.html" />
+    <None Include="sdl-1.2.15\docs\html\guidebasicsinit.html" />
+    <None Include="sdl-1.2.15\docs\html\guidecdromexamples.html" />
+    <None Include="sdl-1.2.15\docs\html\guidecredits.html" />
+    <None Include="sdl-1.2.15\docs\html\guideeventexamples.html" />
+    <None Include="sdl-1.2.15\docs\html\guideexamples.html" />
+    <None Include="sdl-1.2.15\docs\html\guideinput.html" />
+    <None Include="sdl-1.2.15\docs\html\guideinputkeyboard.html" />
+    <None Include="sdl-1.2.15\docs\html\guidepreface.html" />
+    <None Include="sdl-1.2.15\docs\html\guidethebasics.html" />
+    <None Include="sdl-1.2.15\docs\html\guidetimeexamples.html" />
+    <None Include="sdl-1.2.15\docs\html\guidevideo.html" />
+    <None Include="sdl-1.2.15\docs\html\guidevideoopengl.html" />
+    <None Include="sdl-1.2.15\docs\html\index.html" />
+    <None Include="sdl-1.2.15\docs\html\joystick.html" />
+    <None Include="sdl-1.2.15\docs\html\reference.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlactiveevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdladdtimer.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlaudiocvt.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlaudiospec.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlblitsurface.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlbuildaudiocvt.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcd.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdclose.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdeject.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdname.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdnumdrives.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdopen.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdpause.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdplay.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdplaytracks.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdresume.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdstatus.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdstop.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcdtrack.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcloseaudio.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcolor.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcondbroadcast.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcondsignal.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcondwait.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcondwaittimeout.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlconvertaudio.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlconvertsurface.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcreatecond.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcreatecursor.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcreatemutex.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcreatergbsurface.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcreatergbsurfacefrom.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcreatesemaphore.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcreatethread.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlcreateyuvoverlay.html" />
+    <None Include="sdl-1.2.15\docs\html\sdldelay.html" />
+    <None Include="sdl-1.2.15\docs\html\sdldestroycond.html" />
+    <None Include="sdl-1.2.15\docs\html\sdldestroymutex.html" />
+    <None Include="sdl-1.2.15\docs\html\sdldestroysemaphore.html" />
+    <None Include="sdl-1.2.15\docs\html\sdldisplayformat.html" />
+    <None Include="sdl-1.2.15\docs\html\sdldisplayformatalpha.html" />
+    <None Include="sdl-1.2.15\docs\html\sdldisplayyuvoverlay.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlenablekeyrepeat.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlenableunicode.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlenvvars.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdleventstate.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlexposeevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlfillrect.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlflip.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlfreecursor.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlfreesurface.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlfreewav.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlfreeyuvoverlay.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetappstate.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetaudiostatus.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetcliprect.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetcursor.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgeterror.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgeteventfilter.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetgammaramp.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetkeyname.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetkeystate.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetmodstate.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetmousestate.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetrelativemousestate.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetrgb.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetrgba.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetthreadid.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetticks.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetvideoinfo.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlgetvideosurface.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlglattr.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlglgetattribute.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlglgetprocaddress.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlglloadlibrary.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlglsetattribute.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlglswapbuffers.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlinit.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlinitsubsystem.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoyaxisevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoyballevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoybuttonevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoyhatevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoystickclose.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoystickeventstate.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoystickgetaxis.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoystickgetball.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoystickgetbutton.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoystickgethat.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoystickindex.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoystickname.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoysticknumaxes.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoysticknumballs.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoysticknumbuttons.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoysticknumhats.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoystickopen.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoystickopened.html" />
+    <None Include="sdl-1.2.15\docs\html\sdljoystickupdate.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlkey.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlkeyboardevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlkeysym.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlkillthread.html" />
+    <None Include="sdl-1.2.15\docs\html\sdllistmodes.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlloadbmp.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlloadwav.html" />
+    <None Include="sdl-1.2.15\docs\html\sdllockaudio.html" />
+    <None Include="sdl-1.2.15\docs\html\sdllocksurface.html" />
+    <None Include="sdl-1.2.15\docs\html\sdllockyuvoverlay.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlmaprgb.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlmaprgba.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlmixaudio.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlmousebuttonevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlmousemotionevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlmutexp.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlmutexv.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlnumjoysticks.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlopenaudio.html" />
+    <None Include="sdl-1.2.15\docs\html\sdloverlay.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlpalette.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlpauseaudio.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlpeepevents.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlpixelformat.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlpollevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlpumpevents.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlpushevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlquit.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlquitevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlquitsubsystem.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlrect.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlremovetimer.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlresizeevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsavebmp.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsempost.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsemtrywait.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsemvalue.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsemwait.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsemwaittimeout.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsetalpha.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsetcliprect.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsetcolorkey.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsetcolors.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsetcursor.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlseteventfilter.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsetgamma.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsetgammaramp.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsetmodstate.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsetpalette.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsettimer.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsetvideomode.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlshowcursor.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsurface.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlsyswmevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlthreadid.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlunlockaudio.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlunlocksurface.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlunlockyuvoverlay.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlupdaterect.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlupdaterects.html" />
+    <None Include="sdl-1.2.15\docs\html\sdluserevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlvideodrivername.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlvideoinfo.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlvideomodeok.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlwaitevent.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlwaitthread.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlwarpmouse.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlwasinit.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlwmgetcaption.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlwmgrabinput.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlwmiconifywindow.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlwmsetcaption.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlwmseticon.html" />
+    <None Include="sdl-1.2.15\docs\html\sdlwmtogglefullscreen.html" />
+    <None Include="sdl-1.2.15\docs\html\thread.html" />
+    <None Include="sdl-1.2.15\docs\html\time.html" />
+    <None Include="sdl-1.2.15\docs\html\video.html" />
+    <None Include="sdl-1.2.15\docs\html\wm.html" />
+    <None Include="sdl-1.2.15\docs\others\docs.html" />
+    <None Include="sdl-1.2.15\docs\others\VisualC.html" />
+    <None Include="sdl-gfx\docs\index.html" />
+  </ItemGroup>
+</Project>
